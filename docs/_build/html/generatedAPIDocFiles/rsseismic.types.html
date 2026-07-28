@@ -1,0 +1,1487 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rsseismic.types module &#8212; RSSeismic Scripting Reference Manual  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generatedAPIDocFiles/rsseismic.types';</script>
+    <link rel="icon" href="../_static/rocscience_favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python Script Examples" href="../examples.html" />
+    <link rel="prev" title="rsseismic.exceptions module" href="rsseismic.exceptions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-light" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-dark pst-js-only" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.enums.html">rsseismic.enums package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rsseismic.properties.html">rsseismic.properties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.bedrockLayer.html">rsseismic.properties.bedrockLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.meanProfileSoilLayer.html">rsseismic.properties.meanProfileSoilLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.profileGenerationSettings.html">rsseismic.properties.profileGenerationSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.projectSettings.html">rsseismic.properties.projectSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.referenceCurve.html">rsseismic.properties.referenceCurve package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.soilLayer.html">rsseismic.properties.soilLayer package</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerCurve.html">rsseismic.SoilLayerCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerOperations.html">rsseismic.SoilLayerOperations module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.exceptions.html">rsseismic.exceptions module</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.types module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="rsseismic.html" class="nav-link">rsseismic package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rsseismic.types module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-rsseismic.types">
+<span id="rsseismic-types-module"></span><h1>rsseismic.types module<a class="headerlink" href="#module-rsseismic.types" title="Link to this heading">#</a></h1>
+<p>Public value types for RSSeismic scripting (protobuf stays internal).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.UnitSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">UnitSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.UnitSystem" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Project unit system (maps to server isMetric / useMetric RPC flags).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.UnitSystem.Metric">
+<span class="sig-name descname"><span class="pre">Metric</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Metric'</span></em><a class="headerlink" href="#rsseismic.types.UnitSystem.Metric" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.UnitSystem.Imperial">
+<span class="sig-name descname"><span class="pre">Imperial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Imperial'</span></em><a class="headerlink" href="#rsseismic.types.UnitSystem.Imperial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.types.UnitSystem.to_use_metric">
+<span class="sig-name descname"><span class="pre">to_use_metric</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.types.UnitSystem.to_use_metric" title="Link to this definition">#</a></dt>
+<dd><p>Return the useMetric / isMetric flag sent on the wire.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.types.UnitSystem.from_is_metric">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_is_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_metric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rsseismic.types.UnitSystem" title="rsseismic.types.UnitSystem"><span class="pre">UnitSystem</span></a></span></span><a class="headerlink" href="#rsseismic.types.UnitSystem.from_is_metric" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">ResultMotionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.ResultMotionType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Motion variants in the compute-aligned result motion set.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionType.STANDARD">
+<span class="sig-name descname"><span class="pre">STANDARD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#rsseismic.types.ResultMotionType.STANDARD" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionType.COMPLEMENTARY_EQUIVALENT_LINEAR">
+<span class="sig-name descname"><span class="pre">COMPLEMENTARY_EQUIVALENT_LINEAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#rsseismic.types.ResultMotionType.COMPLEMENTARY_EQUIVALENT_LINEAR" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionType.COMPLEMENTARY_NONLINEAR_TOTAL_STRESS_LUMPED_MASS">
+<span class="sig-name descname"><span class="pre">COMPLEMENTARY_NONLINEAR_TOTAL_STRESS_LUMPED_MASS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#rsseismic.types.ResultMotionType.COMPLEMENTARY_NONLINEAR_TOTAL_STRESS_LUMPED_MASS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">ResultSeriesKind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.ResultSeriesKind" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Chart series available from computed profile results.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.ACCELERATION">
+<span class="sig-name descname"><span class="pre">ACCELERATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.ACCELERATION" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.VELOCITY">
+<span class="sig-name descname"><span class="pre">VELOCITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.VELOCITY" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.DISPLACEMENT">
+<span class="sig-name descname"><span class="pre">DISPLACEMENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.DISPLACEMENT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.ARIAS">
+<span class="sig-name descname"><span class="pre">ARIAS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.ARIAS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.SHEAR_STRAIN">
+<span class="sig-name descname"><span class="pre">SHEAR_STRAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.SHEAR_STRAIN" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.SHEAR_STRESS_RATIO">
+<span class="sig-name descname"><span class="pre">SHEAR_STRESS_RATIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.SHEAR_STRESS_RATIO" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.PWP_RATIO">
+<span class="sig-name descname"><span class="pre">PWP_RATIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.PWP_RATIO" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.RESPONSE_SPECTRA">
+<span class="sig-name descname"><span class="pre">RESPONSE_SPECTRA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.RESPONSE_SPECTRA" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.FAS">
+<span class="sig-name descname"><span class="pre">FAS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.FAS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.FAS_RATIO">
+<span class="sig-name descname"><span class="pre">FAS_RATIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.FAS_RATIO" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.PGA">
+<span class="sig-name descname"><span class="pre">PGA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.PGA" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.PGD">
+<span class="sig-name descname"><span class="pre">PGD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.PGD" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.MAX_STRAIN">
+<span class="sig-name descname"><span class="pre">MAX_STRAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.MAX_STRAIN" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.MAX_STRESS">
+<span class="sig-name descname"><span class="pre">MAX_STRESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.MAX_STRESS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.MAX_PWP_RATIO">
+<span class="sig-name descname"><span class="pre">MAX_PWP_RATIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.MAX_PWP_RATIO" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.EFFECTIVE_STRESS">
+<span class="sig-name descname"><span class="pre">EFFECTIVE_STRESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.EFFECTIVE_STRESS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.MOBILIZED_STRESS">
+<span class="sig-name descname"><span class="pre">MOBILIZED_STRESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.MOBILIZED_STRESS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.NORMALIZED_STRESS">
+<span class="sig-name descname"><span class="pre">NORMALIZED_STRESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.NORMALIZED_STRESS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.MOBILIZED_FRICTION_ANGLE">
+<span class="sig-name descname"><span class="pre">MOBILIZED_FRICTION_ANGLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.MOBILIZED_FRICTION_ANGLE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.EFFECTIVE_VERTICAL_STRESS">
+<span class="sig-name descname"><span class="pre">EFFECTIVE_VERTICAL_STRESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.EFFECTIVE_VERTICAL_STRESS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.types.ResultSeriesKind.requires_layer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">requires_layer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultSeriesKind.requires_layer" title="Link to this definition">#</a></dt>
+<dd><p>True when getResultSeriesDataFrame requires a layerID.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.ProfileSummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">ProfileSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isActive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerCount</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totalThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.ProfileSummary" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Summary of a profile in the project.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ProfileSummary.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ProfileSummary.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ProfileSummary.isActive">
+<span class="sig-name descname"><span class="pre">isActive</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ProfileSummary.isActive" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ProfileSummary.layerCount">
+<span class="sig-name descname"><span class="pre">layerCount</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.ProfileSummary.layerCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ProfileSummary.totalThickness">
+<span class="sig-name descname"><span class="pre">totalThickness</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.ProfileSummary.totalThickness" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.ActiveProfile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">ActiveProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerCount</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totalThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.ActiveProfile" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Summary of the active profile.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ActiveProfile.profileName">
+<span class="sig-name descname"><span class="pre">profileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ActiveProfile.profileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ActiveProfile.layerCount">
+<span class="sig-name descname"><span class="pre">layerCount</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.ActiveProfile.layerCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ActiveProfile.totalThickness">
+<span class="sig-name descname"><span class="pre">totalThickness</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.ActiveProfile.totalThickness" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.SoilLayerSummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">SoilLayerSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index1Based</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.SoilLayerSummary" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Summary of a soil layer in a profile.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.SoilLayerSummary.layerID">
+<span class="sig-name descname"><span class="pre">layerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.SoilLayerSummary.layerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.SoilLayerSummary.index1Based">
+<span class="sig-name descname"><span class="pre">index1Based</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.SoilLayerSummary.index1Based" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.SoilLayerSummary.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.SoilLayerSummary.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.SoilLayerSummary.thickness">
+<span class="sig-name descname"><span class="pre">thickness</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.SoilLayerSummary.thickness" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.BedrockLayerSummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">BedrockLayerSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.BedrockLayerSummary" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Summary of the bedrock layer in a profile.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.BedrockLayerSummary.layerID">
+<span class="sig-name descname"><span class="pre">layerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.BedrockLayerSummary.layerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.BedrockLayerSummary.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.BedrockLayerSummary.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.BedrockLayerSummary.thickness">
+<span class="sig-name descname"><span class="pre">thickness</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.BedrockLayerSummary.thickness" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.DeleteProfileResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">DeleteProfileResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deletedProfileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activeProfileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.DeleteProfileResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of Profiles.deleteProfile().</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeleteProfileResult.deletedProfileName">
+<span class="sig-name descname"><span class="pre">deletedProfileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.DeleteProfileResult.deletedProfileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeleteProfileResult.activeProfileName">
+<span class="sig-name descname"><span class="pre">activeProfileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.DeleteProfileResult.activeProfileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MotionInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MotionInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isSelected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MotionInfo" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Ground motion entry for a project.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MotionInfo.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionInfo.filePath">
+<span class="sig-name descname"><span class="pre">filePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MotionInfo.filePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionInfo.isSelected">
+<span class="sig-name descname"><span class="pre">isSelected</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.MotionInfo.isSelected" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MotionPairInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MotionPairInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pairId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionH1Name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionH2Name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionH1FilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionH2FilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isSelected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MotionPairInfo" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Horizontal motion pair inferred from motion file naming.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionPairInfo.pairId">
+<span class="sig-name descname"><span class="pre">pairId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MotionPairInfo.pairId" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionPairInfo.motionH1Name">
+<span class="sig-name descname"><span class="pre">motionH1Name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MotionPairInfo.motionH1Name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionPairInfo.motionH2Name">
+<span class="sig-name descname"><span class="pre">motionH2Name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MotionPairInfo.motionH2Name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionPairInfo.motionH1FilePath">
+<span class="sig-name descname"><span class="pre">motionH1FilePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MotionPairInfo.motionH1FilePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionPairInfo.motionH2FilePath">
+<span class="sig-name descname"><span class="pre">motionH2FilePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MotionPairInfo.motionH2FilePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MotionPairInfo.isSelected">
+<span class="sig-name descname"><span class="pre">isSelected</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.MotionPairInfo.isSelected" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.DeconvolutionLayerResultFiles">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">DeconvolutionLayerResultFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerMotionPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerMotionExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerFasTransferFunctionPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerFasTransferFunctionExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.DeconvolutionLayerResultFiles" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Deconvolution output paths for one soil layer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeconvolutionLayerResultFiles.layerIndex">
+<span class="sig-name descname"><span class="pre">layerIndex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerIndex" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeconvolutionLayerResultFiles.layerMotionPath">
+<span class="sig-name descname"><span class="pre">layerMotionPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerMotionPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeconvolutionLayerResultFiles.layerMotionExists">
+<span class="sig-name descname"><span class="pre">layerMotionExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerMotionExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeconvolutionLayerResultFiles.layerFasTransferFunctionPath">
+<span class="sig-name descname"><span class="pre">layerFasTransferFunctionPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerFasTransferFunctionPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeconvolutionLayerResultFiles.layerFasTransferFunctionExists">
+<span class="sig-name descname"><span class="pre">layerFasTransferFunctionExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerFasTransferFunctionExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.ResultLayerSummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">ResultLayerSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index1Based</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isTopOfRock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.ResultLayerSummary" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A profile layer that can be used with layer-scoped result queries.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultLayerSummary.layerID">
+<span class="sig-name descname"><span class="pre">layerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultLayerSummary.layerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultLayerSummary.index1Based">
+<span class="sig-name descname"><span class="pre">index1Based</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.ResultLayerSummary.index1Based" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultLayerSummary.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultLayerSummary.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultLayerSummary.isTopOfRock">
+<span class="sig-name descname"><span class="pre">isTopOfRock</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultLayerSummary.isTopOfRock" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionSummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">ResultMotionSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceMotionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.ResultMotionSummary" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A motion name in the compute-aligned result motion set.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionSummary.motionName">
+<span class="sig-name descname"><span class="pre">motionName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultMotionSummary.motionName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionSummary.motionType">
+<span class="sig-name descname"><span class="pre">motionType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultMotionSummary.motionType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultMotionSummary.sourceMotionName">
+<span class="sig-name descname"><span class="pre">sourceMotionName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultMotionSummary.sourceMotionName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">ResultDatabaseInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultsFolderPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultDatabasePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultDatabaseExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complementaryResultDatabasePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complementaryResultDatabaseExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputFilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputFileExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strainConvergencePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strainConvergenceExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strainNonConvergenceIdPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strainNonConvergenceExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deconvolutionBedrockMotionPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deconvolutionBedrockMotionExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deconvolutionBedrockFasTransferFunctionPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deconvolutionBedrockFasTransferFunctionExists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deconvolutionLayerFiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#rsseismic.types.DeconvolutionLayerResultFiles" title="rsseismic.types.DeconvolutionLayerResultFiles"><span class="pre">DeconvolutionLayerResultFiles</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topOfRockOutputEnabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topOfRockLayerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topOfRockLayerIndex1Based</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Computed result file paths for one profile/motion pair.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.profileName">
+<span class="sig-name descname"><span class="pre">profileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.profileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.motionName">
+<span class="sig-name descname"><span class="pre">motionName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.motionName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.motionType">
+<span class="sig-name descname"><span class="pre">motionType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.motionType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.resultsFolderPath">
+<span class="sig-name descname"><span class="pre">resultsFolderPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.resultsFolderPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.resultDatabasePath">
+<span class="sig-name descname"><span class="pre">resultDatabasePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.resultDatabasePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.resultDatabaseExists">
+<span class="sig-name descname"><span class="pre">resultDatabaseExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.resultDatabaseExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.complementaryResultDatabasePath">
+<span class="sig-name descname"><span class="pre">complementaryResultDatabasePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.complementaryResultDatabasePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.complementaryResultDatabaseExists">
+<span class="sig-name descname"><span class="pre">complementaryResultDatabaseExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.complementaryResultDatabaseExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.inputFilePath">
+<span class="sig-name descname"><span class="pre">inputFilePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.inputFilePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.inputFileExists">
+<span class="sig-name descname"><span class="pre">inputFileExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.inputFileExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.strainConvergencePath">
+<span class="sig-name descname"><span class="pre">strainConvergencePath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.strainConvergencePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.strainConvergenceExists">
+<span class="sig-name descname"><span class="pre">strainConvergenceExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.strainConvergenceExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.strainNonConvergenceIdPath">
+<span class="sig-name descname"><span class="pre">strainNonConvergenceIdPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.strainNonConvergenceIdPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.strainNonConvergenceExists">
+<span class="sig-name descname"><span class="pre">strainNonConvergenceExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.strainNonConvergenceExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockMotionPath">
+<span class="sig-name descname"><span class="pre">deconvolutionBedrockMotionPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockMotionPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockMotionExists">
+<span class="sig-name descname"><span class="pre">deconvolutionBedrockMotionExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockMotionExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionPath">
+<span class="sig-name descname"><span class="pre">deconvolutionBedrockFasTransferFunctionPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionExists">
+<span class="sig-name descname"><span class="pre">deconvolutionBedrockFasTransferFunctionExists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.deconvolutionLayerFiles">
+<span class="sig-name descname"><span class="pre">deconvolutionLayerFiles</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#rsseismic.types.DeconvolutionLayerResultFiles" title="rsseismic.types.DeconvolutionLayerResultFiles"><span class="pre">DeconvolutionLayerResultFiles</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionLayerFiles" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.topOfRockOutputEnabled">
+<span class="sig-name descname"><span class="pre">topOfRockOutputEnabled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.topOfRockOutputEnabled" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.topOfRockLayerID">
+<span class="sig-name descname"><span class="pre">topOfRockLayerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.topOfRockLayerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.ResultDatabaseInfo.topOfRockLayerIndex1Based">
+<span class="sig-name descname"><span class="pre">topOfRockLayerIndex1Based</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#rsseismic.types.ResultDatabaseInfo.topOfRockLayerIndex1Based" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.InsertLayerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">InsertLayerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index1Based</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.InsertLayerResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of inserting or duplicating a soil layer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.InsertLayerResult.profileName">
+<span class="sig-name descname"><span class="pre">profileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.InsertLayerResult.profileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.InsertLayerResult.layerID">
+<span class="sig-name descname"><span class="pre">layerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.InsertLayerResult.layerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.InsertLayerResult.index1Based">
+<span class="sig-name descname"><span class="pre">index1Based</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.InsertLayerResult.index1Based" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.AppendLayersResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">AppendLayersResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerIDs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.AppendLayersResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of appending one or more soil layers.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.AppendLayersResult.profileName">
+<span class="sig-name descname"><span class="pre">profileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.AppendLayersResult.profileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.AppendLayersResult.layerIDs">
+<span class="sig-name descname"><span class="pre">layerIDs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rsseismic.types.AppendLayersResult.layerIDs" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.DeleteLayerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">DeleteLayerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deletedLayerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.DeleteLayerResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of deleting a soil layer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeleteLayerResult.profileName">
+<span class="sig-name descname"><span class="pre">profileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.DeleteLayerResult.profileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DeleteLayerResult.deletedLayerID">
+<span class="sig-name descname"><span class="pre">deletedLayerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.DeleteLayerResult.deletedLayerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MoveLayerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MoveLayerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index1Based</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MoveLayerResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of moving a soil layer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MoveLayerResult.profileName">
+<span class="sig-name descname"><span class="pre">profileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MoveLayerResult.profileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MoveLayerResult.layerID">
+<span class="sig-name descname"><span class="pre">layerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MoveLayerResult.layerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MoveLayerResult.index1Based">
+<span class="sig-name descname"><span class="pre">index1Based</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.MoveLayerResult.index1Based" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">GqHFittingLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enableModulusMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modulusMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enableModulusMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modulusMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enableStrengthMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strengthMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enableDampMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dampMin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enableDampMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dampMax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enableFixTheta3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixTheta3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.GqHFittingLimits" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Optional G/Gmax and damping limits for curve fitting.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.enableModulusMin">
+<span class="sig-name descname"><span class="pre">enableModulusMin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.enableModulusMin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.modulusMin">
+<span class="sig-name descname"><span class="pre">modulusMin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.modulusMin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.enableModulusMax">
+<span class="sig-name descname"><span class="pre">enableModulusMax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.enableModulusMax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.modulusMax">
+<span class="sig-name descname"><span class="pre">modulusMax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.modulusMax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.enableStrengthMin">
+<span class="sig-name descname"><span class="pre">enableStrengthMin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.enableStrengthMin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.strengthMin">
+<span class="sig-name descname"><span class="pre">strengthMin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.strengthMin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.enableDampMin">
+<span class="sig-name descname"><span class="pre">enableDampMin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.enableDampMin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.dampMin">
+<span class="sig-name descname"><span class="pre">dampMin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.dampMin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.enableDampMax">
+<span class="sig-name descname"><span class="pre">enableDampMax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.enableDampMax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.dampMax">
+<span class="sig-name descname"><span class="pre">dampMax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.dampMax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.enableFixTheta3">
+<span class="sig-name descname"><span class="pre">enableFixTheta3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.enableFixTheta3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.GqHFittingLimits.fixTheta3">
+<span class="sig-name descname"><span class="pre">fixTheta3</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#rsseismic.types.GqHFittingLimits.fixTheta3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileSummary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MeanProfileSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerCount</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totalThickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MeanProfileSummary" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Summary of the mean (representative) profile.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileSummary.profileName">
+<span class="sig-name descname"><span class="pre">profileName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileSummary.profileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileSummary.layerCount">
+<span class="sig-name descname"><span class="pre">layerCount</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileSummary.layerCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileSummary.totalThickness">
+<span class="sig-name descname"><span class="pre">totalThickness</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileSummary.totalThickness" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileInsertLayerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MeanProfileInsertLayerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index1Based</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MeanProfileInsertLayerResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of inserting or duplicating a mean-profile soil layer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileInsertLayerResult.layerID">
+<span class="sig-name descname"><span class="pre">layerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileInsertLayerResult.layerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileInsertLayerResult.index1Based">
+<span class="sig-name descname"><span class="pre">index1Based</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileInsertLayerResult.index1Based" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileAppendLayersResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MeanProfileAppendLayersResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerIDs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MeanProfileAppendLayersResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of appending one or more mean-profile soil layers.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileAppendLayersResult.layerIDs">
+<span class="sig-name descname"><span class="pre">layerIDs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rsseismic.types.MeanProfileAppendLayersResult.layerIDs" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileDeleteLayerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MeanProfileDeleteLayerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deletedLayerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MeanProfileDeleteLayerResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of deleting a mean-profile soil layer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileDeleteLayerResult.deletedLayerID">
+<span class="sig-name descname"><span class="pre">deletedLayerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileDeleteLayerResult.deletedLayerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileMoveLayerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">MeanProfileMoveLayerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layerID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index1Based</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.MeanProfileMoveLayerResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Result of moving a mean-profile soil layer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileMoveLayerResult.layerID">
+<span class="sig-name descname"><span class="pre">layerID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileMoveLayerResult.layerID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.MeanProfileMoveLayerResult.index1Based">
+<span class="sig-name descname"><span class="pre">index1Based</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.types.MeanProfileMoveLayerResult.index1Based" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.DynamicsPoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">DynamicsPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggmax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.DynamicsPoint" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dynamics curve point (strain, G/Gmax, damping, strength).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DynamicsPoint.strain">
+<span class="sig-name descname"><span class="pre">strain</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.DynamicsPoint.strain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DynamicsPoint.ggmax">
+<span class="sig-name descname"><span class="pre">ggmax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.DynamicsPoint.ggmax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DynamicsPoint.damping">
+<span class="sig-name descname"><span class="pre">damping</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.DynamicsPoint.damping" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DynamicsPoint.strength">
+<span class="sig-name descname"><span class="pre">strength</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.DynamicsPoint.strength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.types.DiscretePoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.types.</span></span><span class="sig-name descname"><span class="pre">DiscretePoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggmax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.types.DiscretePoint" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Discrete curve point for Points soil model (strain, G/Gmax, damping).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DiscretePoint.strain">
+<span class="sig-name descname"><span class="pre">strain</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.DiscretePoint.strain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DiscretePoint.ggmax">
+<span class="sig-name descname"><span class="pre">ggmax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.DiscretePoint.ggmax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.types.DiscretePoint.damping">
+<span class="sig-name descname"><span class="pre">damping</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#rsseismic.types.DiscretePoint.damping" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rsseismic.exceptions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rsseismic.exceptions module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../examples.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Script Examples</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.UnitSystem"><code class="docutils literal notranslate"><span class="pre">UnitSystem</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.UnitSystem.Metric"><code class="docutils literal notranslate"><span class="pre">UnitSystem.Metric</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.UnitSystem.Imperial"><code class="docutils literal notranslate"><span class="pre">UnitSystem.Imperial</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.UnitSystem.to_use_metric"><code class="docutils literal notranslate"><span class="pre">UnitSystem.to_use_metric()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.UnitSystem.from_is_metric"><code class="docutils literal notranslate"><span class="pre">UnitSystem.from_is_metric()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionType"><code class="docutils literal notranslate"><span class="pre">ResultMotionType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionType.STANDARD"><code class="docutils literal notranslate"><span class="pre">ResultMotionType.STANDARD</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionType.COMPLEMENTARY_EQUIVALENT_LINEAR"><code class="docutils literal notranslate"><span class="pre">ResultMotionType.COMPLEMENTARY_EQUIVALENT_LINEAR</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionType.COMPLEMENTARY_NONLINEAR_TOTAL_STRESS_LUMPED_MASS"><code class="docutils literal notranslate"><span class="pre">ResultMotionType.COMPLEMENTARY_NONLINEAR_TOTAL_STRESS_LUMPED_MASS</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.ACCELERATION"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.ACCELERATION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.VELOCITY"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.VELOCITY</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.DISPLACEMENT"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.DISPLACEMENT</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.ARIAS"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.ARIAS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.SHEAR_STRAIN"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.SHEAR_STRAIN</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.SHEAR_STRESS_RATIO"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.SHEAR_STRESS_RATIO</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.PWP_RATIO"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.PWP_RATIO</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.RESPONSE_SPECTRA"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.RESPONSE_SPECTRA</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.FAS"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.FAS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.FAS_RATIO"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.FAS_RATIO</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.PGA"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.PGA</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.PGD"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.PGD</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.MAX_STRAIN"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.MAX_STRAIN</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.MAX_STRESS"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.MAX_STRESS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.MAX_PWP_RATIO"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.MAX_PWP_RATIO</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.EFFECTIVE_STRESS"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.EFFECTIVE_STRESS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.MOBILIZED_STRESS"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.MOBILIZED_STRESS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.NORMALIZED_STRESS"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.NORMALIZED_STRESS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.MOBILIZED_FRICTION_ANGLE"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.MOBILIZED_FRICTION_ANGLE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.EFFECTIVE_VERTICAL_STRESS"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.EFFECTIVE_VERTICAL_STRESS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultSeriesKind.requires_layer"><code class="docutils literal notranslate"><span class="pre">ResultSeriesKind.requires_layer</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ProfileSummary"><code class="docutils literal notranslate"><span class="pre">ProfileSummary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ProfileSummary.name"><code class="docutils literal notranslate"><span class="pre">ProfileSummary.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ProfileSummary.isActive"><code class="docutils literal notranslate"><span class="pre">ProfileSummary.isActive</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ProfileSummary.layerCount"><code class="docutils literal notranslate"><span class="pre">ProfileSummary.layerCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ProfileSummary.totalThickness"><code class="docutils literal notranslate"><span class="pre">ProfileSummary.totalThickness</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ActiveProfile"><code class="docutils literal notranslate"><span class="pre">ActiveProfile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ActiveProfile.profileName"><code class="docutils literal notranslate"><span class="pre">ActiveProfile.profileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ActiveProfile.layerCount"><code class="docutils literal notranslate"><span class="pre">ActiveProfile.layerCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ActiveProfile.totalThickness"><code class="docutils literal notranslate"><span class="pre">ActiveProfile.totalThickness</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.SoilLayerSummary"><code class="docutils literal notranslate"><span class="pre">SoilLayerSummary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.SoilLayerSummary.layerID"><code class="docutils literal notranslate"><span class="pre">SoilLayerSummary.layerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.SoilLayerSummary.index1Based"><code class="docutils literal notranslate"><span class="pre">SoilLayerSummary.index1Based</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.SoilLayerSummary.name"><code class="docutils literal notranslate"><span class="pre">SoilLayerSummary.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.SoilLayerSummary.thickness"><code class="docutils literal notranslate"><span class="pre">SoilLayerSummary.thickness</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.BedrockLayerSummary"><code class="docutils literal notranslate"><span class="pre">BedrockLayerSummary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.BedrockLayerSummary.layerID"><code class="docutils literal notranslate"><span class="pre">BedrockLayerSummary.layerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.BedrockLayerSummary.name"><code class="docutils literal notranslate"><span class="pre">BedrockLayerSummary.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.BedrockLayerSummary.thickness"><code class="docutils literal notranslate"><span class="pre">BedrockLayerSummary.thickness</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeleteProfileResult"><code class="docutils literal notranslate"><span class="pre">DeleteProfileResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeleteProfileResult.deletedProfileName"><code class="docutils literal notranslate"><span class="pre">DeleteProfileResult.deletedProfileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeleteProfileResult.activeProfileName"><code class="docutils literal notranslate"><span class="pre">DeleteProfileResult.activeProfileName</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionInfo"><code class="docutils literal notranslate"><span class="pre">MotionInfo</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionInfo.name"><code class="docutils literal notranslate"><span class="pre">MotionInfo.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionInfo.filePath"><code class="docutils literal notranslate"><span class="pre">MotionInfo.filePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionInfo.isSelected"><code class="docutils literal notranslate"><span class="pre">MotionInfo.isSelected</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionPairInfo"><code class="docutils literal notranslate"><span class="pre">MotionPairInfo</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionPairInfo.pairId"><code class="docutils literal notranslate"><span class="pre">MotionPairInfo.pairId</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionPairInfo.motionH1Name"><code class="docutils literal notranslate"><span class="pre">MotionPairInfo.motionH1Name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionPairInfo.motionH2Name"><code class="docutils literal notranslate"><span class="pre">MotionPairInfo.motionH2Name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionPairInfo.motionH1FilePath"><code class="docutils literal notranslate"><span class="pre">MotionPairInfo.motionH1FilePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionPairInfo.motionH2FilePath"><code class="docutils literal notranslate"><span class="pre">MotionPairInfo.motionH2FilePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MotionPairInfo.isSelected"><code class="docutils literal notranslate"><span class="pre">MotionPairInfo.isSelected</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeconvolutionLayerResultFiles"><code class="docutils literal notranslate"><span class="pre">DeconvolutionLayerResultFiles</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerIndex"><code class="docutils literal notranslate"><span class="pre">DeconvolutionLayerResultFiles.layerIndex</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerMotionPath"><code class="docutils literal notranslate"><span class="pre">DeconvolutionLayerResultFiles.layerMotionPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerMotionExists"><code class="docutils literal notranslate"><span class="pre">DeconvolutionLayerResultFiles.layerMotionExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerFasTransferFunctionPath"><code class="docutils literal notranslate"><span class="pre">DeconvolutionLayerResultFiles.layerFasTransferFunctionPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeconvolutionLayerResultFiles.layerFasTransferFunctionExists"><code class="docutils literal notranslate"><span class="pre">DeconvolutionLayerResultFiles.layerFasTransferFunctionExists</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultLayerSummary"><code class="docutils literal notranslate"><span class="pre">ResultLayerSummary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultLayerSummary.layerID"><code class="docutils literal notranslate"><span class="pre">ResultLayerSummary.layerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultLayerSummary.index1Based"><code class="docutils literal notranslate"><span class="pre">ResultLayerSummary.index1Based</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultLayerSummary.name"><code class="docutils literal notranslate"><span class="pre">ResultLayerSummary.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultLayerSummary.isTopOfRock"><code class="docutils literal notranslate"><span class="pre">ResultLayerSummary.isTopOfRock</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionSummary"><code class="docutils literal notranslate"><span class="pre">ResultMotionSummary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionSummary.motionName"><code class="docutils literal notranslate"><span class="pre">ResultMotionSummary.motionName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionSummary.motionType"><code class="docutils literal notranslate"><span class="pre">ResultMotionSummary.motionType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultMotionSummary.sourceMotionName"><code class="docutils literal notranslate"><span class="pre">ResultMotionSummary.sourceMotionName</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.profileName"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.profileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.motionName"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.motionName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.motionType"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.motionType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.resultsFolderPath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.resultsFolderPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.resultDatabasePath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.resultDatabasePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.resultDatabaseExists"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.resultDatabaseExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.complementaryResultDatabasePath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.complementaryResultDatabasePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.complementaryResultDatabaseExists"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.complementaryResultDatabaseExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.inputFilePath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.inputFilePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.inputFileExists"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.inputFileExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.strainConvergencePath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.strainConvergencePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.strainConvergenceExists"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.strainConvergenceExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.strainNonConvergenceIdPath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.strainNonConvergenceIdPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.strainNonConvergenceExists"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.strainNonConvergenceExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockMotionPath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.deconvolutionBedrockMotionPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockMotionExists"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.deconvolutionBedrockMotionExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionPath"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionExists"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.deconvolutionBedrockFasTransferFunctionExists</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.deconvolutionLayerFiles"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.deconvolutionLayerFiles</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.topOfRockOutputEnabled"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.topOfRockOutputEnabled</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.topOfRockLayerID"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.topOfRockLayerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.ResultDatabaseInfo.topOfRockLayerIndex1Based"><code class="docutils literal notranslate"><span class="pre">ResultDatabaseInfo.topOfRockLayerIndex1Based</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.InsertLayerResult"><code class="docutils literal notranslate"><span class="pre">InsertLayerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.InsertLayerResult.profileName"><code class="docutils literal notranslate"><span class="pre">InsertLayerResult.profileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.InsertLayerResult.layerID"><code class="docutils literal notranslate"><span class="pre">InsertLayerResult.layerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.InsertLayerResult.index1Based"><code class="docutils literal notranslate"><span class="pre">InsertLayerResult.index1Based</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.AppendLayersResult"><code class="docutils literal notranslate"><span class="pre">AppendLayersResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.AppendLayersResult.profileName"><code class="docutils literal notranslate"><span class="pre">AppendLayersResult.profileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.AppendLayersResult.layerIDs"><code class="docutils literal notranslate"><span class="pre">AppendLayersResult.layerIDs</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeleteLayerResult"><code class="docutils literal notranslate"><span class="pre">DeleteLayerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeleteLayerResult.profileName"><code class="docutils literal notranslate"><span class="pre">DeleteLayerResult.profileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DeleteLayerResult.deletedLayerID"><code class="docutils literal notranslate"><span class="pre">DeleteLayerResult.deletedLayerID</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MoveLayerResult"><code class="docutils literal notranslate"><span class="pre">MoveLayerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MoveLayerResult.profileName"><code class="docutils literal notranslate"><span class="pre">MoveLayerResult.profileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MoveLayerResult.layerID"><code class="docutils literal notranslate"><span class="pre">MoveLayerResult.layerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MoveLayerResult.index1Based"><code class="docutils literal notranslate"><span class="pre">MoveLayerResult.index1Based</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.enableModulusMin"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.enableModulusMin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.modulusMin"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.modulusMin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.enableModulusMax"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.enableModulusMax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.modulusMax"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.modulusMax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.enableStrengthMin"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.enableStrengthMin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.strengthMin"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.strengthMin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.enableDampMin"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.enableDampMin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.dampMin"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.dampMin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.enableDampMax"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.enableDampMax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.dampMax"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.dampMax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.enableFixTheta3"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.enableFixTheta3</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.GqHFittingLimits.fixTheta3"><code class="docutils literal notranslate"><span class="pre">GqHFittingLimits.fixTheta3</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileSummary"><code class="docutils literal notranslate"><span class="pre">MeanProfileSummary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileSummary.profileName"><code class="docutils literal notranslate"><span class="pre">MeanProfileSummary.profileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileSummary.layerCount"><code class="docutils literal notranslate"><span class="pre">MeanProfileSummary.layerCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileSummary.totalThickness"><code class="docutils literal notranslate"><span class="pre">MeanProfileSummary.totalThickness</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileInsertLayerResult"><code class="docutils literal notranslate"><span class="pre">MeanProfileInsertLayerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileInsertLayerResult.layerID"><code class="docutils literal notranslate"><span class="pre">MeanProfileInsertLayerResult.layerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileInsertLayerResult.index1Based"><code class="docutils literal notranslate"><span class="pre">MeanProfileInsertLayerResult.index1Based</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileAppendLayersResult"><code class="docutils literal notranslate"><span class="pre">MeanProfileAppendLayersResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileAppendLayersResult.layerIDs"><code class="docutils literal notranslate"><span class="pre">MeanProfileAppendLayersResult.layerIDs</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileDeleteLayerResult"><code class="docutils literal notranslate"><span class="pre">MeanProfileDeleteLayerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileDeleteLayerResult.deletedLayerID"><code class="docutils literal notranslate"><span class="pre">MeanProfileDeleteLayerResult.deletedLayerID</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileMoveLayerResult"><code class="docutils literal notranslate"><span class="pre">MeanProfileMoveLayerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileMoveLayerResult.layerID"><code class="docutils literal notranslate"><span class="pre">MeanProfileMoveLayerResult.layerID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.MeanProfileMoveLayerResult.index1Based"><code class="docutils literal notranslate"><span class="pre">MeanProfileMoveLayerResult.index1Based</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DynamicsPoint"><code class="docutils literal notranslate"><span class="pre">DynamicsPoint</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DynamicsPoint.strain"><code class="docutils literal notranslate"><span class="pre">DynamicsPoint.strain</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DynamicsPoint.ggmax"><code class="docutils literal notranslate"><span class="pre">DynamicsPoint.ggmax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DynamicsPoint.damping"><code class="docutils literal notranslate"><span class="pre">DynamicsPoint.damping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DynamicsPoint.strength"><code class="docutils literal notranslate"><span class="pre">DynamicsPoint.strength</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DiscretePoint"><code class="docutils literal notranslate"><span class="pre">DiscretePoint</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DiscretePoint.strain"><code class="docutils literal notranslate"><span class="pre">DiscretePoint.strain</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DiscretePoint.ggmax"><code class="docutils literal notranslate"><span class="pre">DiscretePoint.ggmax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.types.DiscretePoint.damping"><code class="docutils literal notranslate"><span class="pre">DiscretePoint.damping</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generatedAPIDocFiles/rsseismic.types.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rocscience Inc..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
