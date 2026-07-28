@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rsseismic.Model module &#8212; RSSeismic Scripting Reference Manual  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generatedAPIDocFiles/rsseismic.Model';</script>
+    <link rel="icon" href="../_static/rocscience_favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="rsseismic.Motions module" href="rsseismic.Motions.html" />
+    <link rel="prev" title="rsseismic.MeanProfileSoilLayer module" href="rsseismic.MeanProfileSoilLayer.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-light" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-dark pst-js-only" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.enums.html">rsseismic.enums package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rsseismic.properties.html">rsseismic.properties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.bedrockLayer.html">rsseismic.properties.bedrockLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.meanProfileSoilLayer.html">rsseismic.properties.meanProfileSoilLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.profileGenerationSettings.html">rsseismic.properties.profileGenerationSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.projectSettings.html">rsseismic.properties.projectSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.referenceCurve.html">rsseismic.properties.referenceCurve package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.soilLayer.html">rsseismic.properties.soilLayer package</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerCurve.html">rsseismic.SoilLayerCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerOperations.html">rsseismic.SoilLayerOperations module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.exceptions.html">rsseismic.exceptions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.types.html">rsseismic.types module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="rsseismic.html" class="nav-link">rsseismic package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rsseismic.Model module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-rsseismic.Model">
+<span id="rsseismic-model-module"></span><h1>rsseismic.Model module<a class="headerlink" href="#module-rsseismic.Model" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Model.RunComputeResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Model.</span></span><span class="sig-name descname"><span class="pre">RunComputeResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialSuccess</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorMessage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Model.RunComputeResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Outcome of <code class="docutils literal notranslate"><span class="pre">Model.runCompute()</span></code>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.RunComputeResult.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.RunComputeResult.success" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.RunComputeResult.partialSuccess">
+<span class="sig-name descname"><span class="pre">partialSuccess</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.RunComputeResult.partialSuccess" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.RunComputeResult.errorMessage">
+<span class="sig-name descname"><span class="pre">errorMessage</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.Model.RunComputeResult.errorMessage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Model.RunComputeResult.ok">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ok</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.RunComputeResult.ok" title="Link to this definition">#</a></dt>
+<dd><p>True when every selected profile and motion pair completed successfully.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Model.</span></span><span class="sig-name descname"><span class="pre">GenerateProfilesResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorMessage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validationErrors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profileCount</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profileNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hasBeenGenerated</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Outcome of <code class="docutils literal notranslate"><span class="pre">Model.generateProfiles()</span></code>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult.success" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult.errorMessage">
+<span class="sig-name descname"><span class="pre">errorMessage</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult.errorMessage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult.validationErrors">
+<span class="sig-name descname"><span class="pre">validationErrors</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult.validationErrors" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult.profileCount">
+<span class="sig-name descname"><span class="pre">profileCount</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult.profileCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult.profileNames">
+<span class="sig-name descname"><span class="pre">profileNames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult.profileNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult.hasBeenGenerated">
+<span class="sig-name descname"><span class="pre">hasBeenGenerated</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult.hasBeenGenerated" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Model.GenerateProfilesResult.ok">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ok</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.GenerateProfilesResult.ok" title="Link to this definition">#</a></dt>
+<dd><p>True when profile generation completed successfully.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Model.ResetGeneratedProfilesResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Model.</span></span><span class="sig-name descname"><span class="pre">ResetGeneratedProfilesResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorMessage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hasBeenGenerated</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Model.ResetGeneratedProfilesResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Outcome of <code class="docutils literal notranslate"><span class="pre">Model.resetGeneratedProfiles()</span></code>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.ResetGeneratedProfilesResult.success">
+<span class="sig-name descname"><span class="pre">success</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.ResetGeneratedProfilesResult.success" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.ResetGeneratedProfilesResult.errorMessage">
+<span class="sig-name descname"><span class="pre">errorMessage</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.Model.ResetGeneratedProfilesResult.errorMessage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.Model.ResetGeneratedProfilesResult.hasBeenGenerated">
+<span class="sig-name descname"><span class="pre">hasBeenGenerated</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#rsseismic.Model.ResetGeneratedProfilesResult.hasBeenGenerated" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Model.Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Model.Model" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ProxyObject</span></code></p>
+<p>Handle for an open RSSeismic project.</p>
+<p>Obtain a <code class="docutils literal notranslate"><span class="pre">Model</span></code> from <code class="docutils literal notranslate"><span class="pre">RSSeismicApplication.openFile(path)</span></code> or
+<code class="docutils literal notranslate"><span class="pre">RSSeismicApplication.newProject()</span></code>.</p>
+<p>Use the attributes on this object to work with project data: <code class="docutils literal notranslate"><span class="pre">Profiles</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Motions</span></code>, <code class="docutils literal notranslate"><span class="pre">Results</span></code>, <code class="docutils literal notranslate"><span class="pre">MeanProfile</span></code>, <code class="docutils literal notranslate"><span class="pre">ProjectSettings</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ProfileGenerationSettings</span></code>, and <code class="docutils literal notranslate"><span class="pre">SoilLayers</span></code>.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.modelId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modelId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.Model.Model.modelId" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Model.Model.save" title="Link to this definition">#</a></dt>
+<dd><p>Save the project to its current file path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.saveAs">
+<span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Model.Model.saveAs" title="Link to this definition">#</a></dt>
+<dd><p>Save the project to a new file path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saveProject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Model.Model.close" title="Link to this definition">#</a></dt>
+<dd><p>Close the project in RSSeismic.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">saveProject</span></code> is True, the project is saved before it is closed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.runCompute">
+<span class="sig-name descname"><span class="pre">runCompute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rsseismic.Model.RunComputeResult" title="rsseismic.Model.RunComputeResult"><span class="pre">RunComputeResult</span></a></span></span><a class="headerlink" href="#rsseismic.Model.Model.runCompute" title="Link to this definition">#</a></dt>
+<dd><p>Run analysis for all selected profile and motion combinations.</p>
+<p>Returns a <code class="docutils literal notranslate"><span class="pre">RunComputeResult</span></code>. Check <code class="docutils literal notranslate"><span class="pre">result.ok</span></code> for full success.
+When <code class="docutils literal notranslate"><span class="pre">partialSuccess</span></code> is True, some pairs completed but others failed;
+see <code class="docutils literal notranslate"><span class="pre">errorMessage</span></code> for details.</p>
+<p>Optional <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is the maximum wait time in seconds for long runs.
+When omitted, the call waits until compute finishes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.clearResults">
+<span class="sig-name descname"><span class="pre">clearResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Model.Model.clearResults" title="Link to this definition">#</a></dt>
+<dd><p>Remove stored analysis results from the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.resetGeneratedProfiles">
+<span class="sig-name descname"><span class="pre">resetGeneratedProfiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rsseismic.Model.ResetGeneratedProfilesResult" title="rsseismic.Model.ResetGeneratedProfilesResult"><span class="pre">ResetGeneratedProfilesResult</span></a></span></span><a class="headerlink" href="#rsseismic.Model.Model.resetGeneratedProfiles" title="Link to this definition">#</a></dt>
+<dd><p>Clear the generated-profiles state so profiles can be generated again.</p>
+<p>Does not remove profiles already in the project. Requires automatic profile
+generation to be enabled in project settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Model.Model.generateProfiles">
+<span class="sig-name descname"><span class="pre">generateProfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rsseismic.Model.GenerateProfilesResult" title="rsseismic.Model.GenerateProfilesResult"><span class="pre">GenerateProfilesResult</span></a></span></span><a class="headerlink" href="#rsseismic.Model.Model.generateProfiles" title="Link to this definition">#</a></dt>
+<dd><p>Create individual profiles from the mean profile template.</p>
+<p>Validates <code class="docutils literal notranslate"><span class="pre">model.MeanProfile</span></code> first, then replaces the profiles in the
+project with the newly generated set. Configure how many profiles to create
+with <code class="docutils literal notranslate"><span class="pre">model.ProfileGenerationSettings</span></code> before calling this method.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">seed</span></code> is 0, RSSeismic chooses a random seed. Use a fixed seed to
+reproduce the same generated profiles.</p>
+<p>Optional <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is the maximum wait time in seconds. When omitted, the
+call waits until generation finishes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="rsseismic.exceptions.html#rsseismic.exceptions.ScriptingError" title="rsseismic.exceptions.ScriptingError"><strong>ScriptingError</strong></a> – Validation failed or generation could not complete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rsseismic.MeanProfileSoilLayer.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rsseismic.MeanProfileSoilLayer module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rsseismic.Motions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">rsseismic.Motions module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.RunComputeResult"><code class="docutils literal notranslate"><span class="pre">RunComputeResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.RunComputeResult.success"><code class="docutils literal notranslate"><span class="pre">RunComputeResult.success</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.RunComputeResult.partialSuccess"><code class="docutils literal notranslate"><span class="pre">RunComputeResult.partialSuccess</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.RunComputeResult.errorMessage"><code class="docutils literal notranslate"><span class="pre">RunComputeResult.errorMessage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.RunComputeResult.ok"><code class="docutils literal notranslate"><span class="pre">RunComputeResult.ok</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult.success"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult.success</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult.errorMessage"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult.errorMessage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult.validationErrors"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult.validationErrors</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult.profileCount"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult.profileCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult.profileNames"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult.profileNames</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult.hasBeenGenerated"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult.hasBeenGenerated</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.GenerateProfilesResult.ok"><code class="docutils literal notranslate"><span class="pre">GenerateProfilesResult.ok</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.ResetGeneratedProfilesResult"><code class="docutils literal notranslate"><span class="pre">ResetGeneratedProfilesResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.ResetGeneratedProfilesResult.success"><code class="docutils literal notranslate"><span class="pre">ResetGeneratedProfilesResult.success</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.ResetGeneratedProfilesResult.errorMessage"><code class="docutils literal notranslate"><span class="pre">ResetGeneratedProfilesResult.errorMessage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.ResetGeneratedProfilesResult.hasBeenGenerated"><code class="docutils literal notranslate"><span class="pre">ResetGeneratedProfilesResult.hasBeenGenerated</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model"><code class="docutils literal notranslate"><span class="pre">Model</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.modelId"><code class="docutils literal notranslate"><span class="pre">Model.modelId</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.save"><code class="docutils literal notranslate"><span class="pre">Model.save()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.saveAs"><code class="docutils literal notranslate"><span class="pre">Model.saveAs()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.close"><code class="docutils literal notranslate"><span class="pre">Model.close()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.runCompute"><code class="docutils literal notranslate"><span class="pre">Model.runCompute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.clearResults"><code class="docutils literal notranslate"><span class="pre">Model.clearResults()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.resetGeneratedProfiles"><code class="docutils literal notranslate"><span class="pre">Model.resetGeneratedProfiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Model.Model.generateProfiles"><code class="docutils literal notranslate"><span class="pre">Model.generateProfiles()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generatedAPIDocFiles/rsseismic.Model.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rocscience Inc..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

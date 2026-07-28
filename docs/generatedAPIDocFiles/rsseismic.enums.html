@@ -1,0 +1,1078 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rsseismic.enums package &#8212; RSSeismic Scripting Reference Manual  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generatedAPIDocFiles/rsseismic.enums';</script>
+    <link rel="icon" href="../_static/rocscience_favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="rsseismic.properties package" href="rsseismic.properties.html" />
+    <link rel="prev" title="rsseismic package" href="rsseismic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-light" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-dark pst-js-only" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.enums package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rsseismic.properties.html">rsseismic.properties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.bedrockLayer.html">rsseismic.properties.bedrockLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.meanProfileSoilLayer.html">rsseismic.properties.meanProfileSoilLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.profileGenerationSettings.html">rsseismic.properties.profileGenerationSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.projectSettings.html">rsseismic.properties.projectSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.referenceCurve.html">rsseismic.properties.referenceCurve package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.soilLayer.html">rsseismic.properties.soilLayer package</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerCurve.html">rsseismic.SoilLayerCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerOperations.html">rsseismic.SoilLayerOperations module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.exceptions.html">rsseismic.exceptions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.types.html">rsseismic.types module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="rsseismic.html" class="nav-link">rsseismic package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rsseismic.enums package</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rsseismic-enums-package">
+<h1>rsseismic.enums package<a class="headerlink" href="#rsseismic-enums-package" title="Link to this heading">#</a></h1>
+<p>Typed enum values for RSSeismic scripting properties and project settings.
+Import from the public package namespace:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rsseismic.enums</span> <span class="kn">import</span> <span class="n">SoilModel</span><span class="p">,</span> <span class="n">AnalysisMode</span><span class="p">,</span> <span class="n">InputMotionConfiguration</span>
+</pre></div>
+</div>
+<p>Each enum is a <code class="docutils literal notranslate"><span class="pre">str</span></code> subclass: members compare equal to their gRPC wire strings, and
+<code class="docutils literal notranslate"><span class="pre">EnumClass(&quot;WireValue&quot;)</span></code> resolves the typed member. Reserved name <code class="docutils literal notranslate"><span class="pre">None</span></code> is exposed as
+<code class="docutils literal notranslate"><span class="pre">None_</span></code> on enums such as <code class="docutils literal notranslate"><span class="pre">CurveModel</span></code> and <code class="docutils literal notranslate"><span class="pre">PWPModel</span></code>.</p>
+<dl class="py class" id="module-rsseismic.enums._generated">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.AnalysisMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">AnalysisMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.AnalysisMode" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eAnalysisMode.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.AnalysisMode.Linear">
+<span class="sig-name descname"><span class="pre">Linear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Linear'</span></em><a class="headerlink" href="#rsseismic.enums._generated.AnalysisMode.Linear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.AnalysisMode.EquivalentLinear">
+<span class="sig-name descname"><span class="pre">EquivalentLinear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EquivalentLinear'</span></em><a class="headerlink" href="#rsseismic.enums._generated.AnalysisMode.EquivalentLinear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.AnalysisMode.Nonlinear">
+<span class="sig-name descname"><span class="pre">Nonlinear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Nonlinear'</span></em><a class="headerlink" href="#rsseismic.enums._generated.AnalysisMode.Nonlinear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ComplexShearModulusFormulation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">ComplexShearModulusFormulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.ComplexShearModulusFormulation" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eComplexShearModulusFormulation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ComplexShearModulusFormulation.FREQUENCY_INDEPENDENT">
+<span class="sig-name descname"><span class="pre">FREQUENCY_INDEPENDENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FREQUENCY_INDEPENDENT'</span></em><a class="headerlink" href="#rsseismic.enums._generated.ComplexShearModulusFormulation.FREQUENCY_INDEPENDENT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ComplexShearModulusFormulation.FREQUENCY_DEPENDENT">
+<span class="sig-name descname"><span class="pre">FREQUENCY_DEPENDENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FREQUENCY_DEPENDENT'</span></em><a class="headerlink" href="#rsseismic.enums._generated.ComplexShearModulusFormulation.FREQUENCY_DEPENDENT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ComplexShearModulusFormulation.SIMPLIFIED">
+<span class="sig-name descname"><span class="pre">SIMPLIFIED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SIMPLIFIED'</span></em><a class="headerlink" href="#rsseismic.enums._generated.ComplexShearModulusFormulation.SIMPLIFIED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">CurveModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.CurveModel" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eCurveModel.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.None_">
+<span class="sig-name descname"><span class="pre">None_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'None'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.None_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Amir_Faryar_2016">
+<span class="sig-name descname"><span class="pre">Amir_Faryar_2016</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Amir_Faryar_2016'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Amir_Faryar_2016" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Andrus_2003">
+<span class="sig-name descname"><span class="pre">Andrus_2003</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Andrus_2003'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Andrus_2003" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Darendeli_2001">
+<span class="sig-name descname"><span class="pre">Darendeli_2001</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Darendeli_2001'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Darendeli_2001" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Menq_2003">
+<span class="sig-name descname"><span class="pre">Menq_2003</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Menq_2003'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Menq_2003" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Roblee_Chiou_2004">
+<span class="sig-name descname"><span class="pre">Roblee_Chiou_2004</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Roblee_Chiou_2004'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Roblee_Chiou_2004" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Seed_Idriss_Upper_Limit">
+<span class="sig-name descname"><span class="pre">Seed_Idriss_Upper_Limit</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Seed_Idriss_Upper_Limit'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Seed_Idriss_Upper_Limit" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Seed_Idriss_Mean">
+<span class="sig-name descname"><span class="pre">Seed_Idriss_Mean</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Seed_Idriss_Mean'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Seed_Idriss_Mean" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Seed_Idriss_Lower_Limit">
+<span class="sig-name descname"><span class="pre">Seed_Idriss_Lower_Limit</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Seed_Idriss_Lower_Limit'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Seed_Idriss_Lower_Limit" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Zhang_2005">
+<span class="sig-name descname"><span class="pre">Zhang_2005</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Zhang_2005'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Zhang_2005" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.CurveModel.Vucetic_Dobry_1991">
+<span class="sig-name descname"><span class="pre">Vucetic_Dobry_1991</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Vucetic_Dobry_1991'</span></em><a class="headerlink" href="#rsseismic.enums._generated.CurveModel.Vucetic_Dobry_1991" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.HystereticFormulation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">HystereticFormulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.HystereticFormulation" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eHystereticFormulation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.HystereticFormulation.NonMasing">
+<span class="sig-name descname"><span class="pre">NonMasing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NonMasing'</span></em><a class="headerlink" href="#rsseismic.enums._generated.HystereticFormulation.NonMasing" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.HystereticFormulation.Masing">
+<span class="sig-name descname"><span class="pre">Masing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Masing'</span></em><a class="headerlink" href="#rsseismic.enums._generated.HystereticFormulation.Masing" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.InputMotionConfiguration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">InputMotionConfiguration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.InputMotionConfiguration" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eInputMotionConfiguration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.InputMotionConfiguration.UniDirectional">
+<span class="sig-name descname"><span class="pre">UniDirectional</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UniDirectional'</span></em><a class="headerlink" href="#rsseismic.enums._generated.InputMotionConfiguration.UniDirectional" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.InputMotionConfiguration.BiDirectional">
+<span class="sig-name descname"><span class="pre">BiDirectional</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BiDirectional'</span></em><a class="headerlink" href="#rsseismic.enums._generated.InputMotionConfiguration.BiDirectional" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.IntegrationScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">IntegrationScheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.IntegrationScheme" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eIntegrationScheme.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.IntegrationScheme.IMPLICIT_NEWMARK">
+<span class="sig-name descname"><span class="pre">IMPLICIT_NEWMARK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IMPLICIT_NEWMARK'</span></em><a class="headerlink" href="#rsseismic.enums._generated.IntegrationScheme.IMPLICIT_NEWMARK" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.IntegrationScheme.EXPLICIT_HEUN">
+<span class="sig-name descname"><span class="pre">EXPLICIT_HEUN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EXPLICIT_HEUN'</span></em><a class="headerlink" href="#rsseismic.enums._generated.IntegrationScheme.EXPLICIT_HEUN" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.LayerOutputSetting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">LayerOutputSetting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.LayerOutputSetting" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eLayerOutputSetting.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.LayerOutputSetting.SURFACE_ONLY">
+<span class="sig-name descname"><span class="pre">SURFACE_ONLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SURFACE_ONLY'</span></em><a class="headerlink" href="#rsseismic.enums._generated.LayerOutputSetting.SURFACE_ONLY" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.LayerOutputSetting.ALL_LAYERS">
+<span class="sig-name descname"><span class="pre">ALL_LAYERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ALL_LAYERS'</span></em><a class="headerlink" href="#rsseismic.enums._generated.LayerOutputSetting.ALL_LAYERS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.LayerOutputSetting.SPECIFIC_DEPTH">
+<span class="sig-name descname"><span class="pre">SPECIFIC_DEPTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SPECIFIC_DEPTH'</span></em><a class="headerlink" href="#rsseismic.enums._generated.LayerOutputSetting.SPECIFIC_DEPTH" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.LayerOutputSetting.SPECIFIC_LAYERS">
+<span class="sig-name descname"><span class="pre">SPECIFIC_LAYERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SPECIFIC_LAYERS'</span></em><a class="headerlink" href="#rsseismic.enums._generated.LayerOutputSetting.SPECIFIC_LAYERS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.PWPModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">PWPModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.PWPModel" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.ePWPModel.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.PWPModel.Sand_Vucetic_Dobry">
+<span class="sig-name descname"><span class="pre">Sand_Vucetic_Dobry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Sand_Vucetic_Dobry'</span></em><a class="headerlink" href="#rsseismic.enums._generated.PWPModel.Sand_Vucetic_Dobry" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.PWPModel.Clay_Matasovic">
+<span class="sig-name descname"><span class="pre">Clay_Matasovic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Clay_Matasovic'</span></em><a class="headerlink" href="#rsseismic.enums._generated.PWPModel.Clay_Matasovic" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.PWPModel.Sand_GMP">
+<span class="sig-name descname"><span class="pre">Sand_GMP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Sand_GMP'</span></em><a class="headerlink" href="#rsseismic.enums._generated.PWPModel.Sand_GMP" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.PWPModel.Sand_Park_Ahn">
+<span class="sig-name descname"><span class="pre">Sand_Park_Ahn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Sand_Park_Ahn'</span></em><a class="headerlink" href="#rsseismic.enums._generated.PWPModel.Sand_Park_Ahn" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.PWPModel.General_Berrill_Davis">
+<span class="sig-name descname"><span class="pre">General_Berrill_Davis</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'General_Berrill_Davis'</span></em><a class="headerlink" href="#rsseismic.enums._generated.PWPModel.General_Berrill_Davis" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.PWPModel.None_">
+<span class="sig-name descname"><span class="pre">None_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'None'</span></em><a class="headerlink" href="#rsseismic.enums._generated.PWPModel.None_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ReductionFactorFormulation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">ReductionFactorFormulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.ReductionFactorFormulation" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eReductionFactorFormulation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ReductionFactorFormulation.MRDF_UIUC">
+<span class="sig-name descname"><span class="pre">MRDF_UIUC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MRDF_UIUC'</span></em><a class="headerlink" href="#rsseismic.enums._generated.ReductionFactorFormulation.MRDF_UIUC" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ReductionFactorFormulation.MRDF_Darendeli">
+<span class="sig-name descname"><span class="pre">MRDF_Darendeli</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MRDF_Darendeli'</span></em><a class="headerlink" href="#rsseismic.enums._generated.ReductionFactorFormulation.MRDF_Darendeli" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.ReductionFactorFormulation.None_">
+<span class="sig-name descname"><span class="pre">None_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'None'</span></em><a class="headerlink" href="#rsseismic.enums._generated.ReductionFactorFormulation.None_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">SoilModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.SoilModel" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eSoilModel.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilModel.GQ_H">
+<span class="sig-name descname"><span class="pre">GQ_H</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GQ_H'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilModel.GQ_H" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilModel.MKZ">
+<span class="sig-name descname"><span class="pre">MKZ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MKZ'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilModel.MKZ" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilModel.Linear">
+<span class="sig-name descname"><span class="pre">Linear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Linear'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilModel.Linear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilModel.Points">
+<span class="sig-name descname"><span class="pre">Points</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Points'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilModel.Points" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilModel.Yee">
+<span class="sig-name descname"><span class="pre">Yee</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Yee'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilModel.Yee" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">SoilType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.SoilType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eSoilType.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilType.Sand">
+<span class="sig-name descname"><span class="pre">Sand</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Sand'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilType.Sand" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilType.Clay">
+<span class="sig-name descname"><span class="pre">Clay</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Clay'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilType.Clay" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SoilType.UserDefined">
+<span class="sig-name descname"><span class="pre">UserDefined</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UserDefined'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SoilType.UserDefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SolutionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">SolutionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.SolutionType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eSolutionType.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SolutionType.FrequencyDomain">
+<span class="sig-name descname"><span class="pre">FrequencyDomain</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FrequencyDomain'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SolutionType.FrequencyDomain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SolutionType.TimeDomain">
+<span class="sig-name descname"><span class="pre">TimeDomain</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TimeDomain'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SolutionType.TimeDomain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SolutionType.StrainDomain">
+<span class="sig-name descname"><span class="pre">StrainDomain</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'StrainDomain'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SolutionType.StrainDomain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SolverType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">SolverType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.SolverType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eSolverType.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SolverType.LumpedMassModel">
+<span class="sig-name descname"><span class="pre">LumpedMassModel</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LumpedMassModel'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SolverType.LumpedMassModel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.SolverType.FiniteElementMethod">
+<span class="sig-name descname"><span class="pre">FiniteElementMethod</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FiniteElementMethod'</span></em><a class="headerlink" href="#rsseismic.enums._generated.SolverType.FiniteElementMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.StepControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">StepControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.StepControl" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eStepControl.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.StepControl.FLEXIBLE">
+<span class="sig-name descname"><span class="pre">FLEXIBLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FLEXIBLE'</span></em><a class="headerlink" href="#rsseismic.enums._generated.StepControl.FLEXIBLE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.StepControl.FIXED">
+<span class="sig-name descname"><span class="pre">FIXED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FIXED'</span></em><a class="headerlink" href="#rsseismic.enums._generated.StepControl.FIXED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.TimeHistoryInterpolationMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">TimeHistoryInterpolationMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.TimeHistoryInterpolationMethod" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eTimeHistoryInterpolationMethod.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.TimeHistoryInterpolationMethod.LINEAR">
+<span class="sig-name descname"><span class="pre">LINEAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LINEAR'</span></em><a class="headerlink" href="#rsseismic.enums._generated.TimeHistoryInterpolationMethod.LINEAR" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.TimeHistoryInterpolationMethod.ZERO_PADDED">
+<span class="sig-name descname"><span class="pre">ZERO_PADDED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ZERO_PADDED'</span></em><a class="headerlink" href="#rsseismic.enums._generated.TimeHistoryInterpolationMethod.ZERO_PADDED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VaryWithDepthOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">VaryWithDepthOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.VaryWithDepthOption" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eVaryWithDepthOption.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VaryWithDepthOption.Constant_Value">
+<span class="sig-name descname"><span class="pre">Constant_Value</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Constant_Value'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VaryWithDepthOption.Constant_Value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VaryWithDepthOption.Vary_With_Depth">
+<span class="sig-name descname"><span class="pre">Vary_With_Depth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Vary_With_Depth'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VaryWithDepthOption.Vary_With_Depth" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums._generated.</span></span><span class="sig-name descname"><span class="pre">VelocityRandInputMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python mirror of DeepSoilFile.eVelocityRandInputMethod.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.GeomatrixAB">
+<span class="sig-name descname"><span class="pre">GeomatrixAB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GeomatrixAB'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.GeomatrixAB" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.GeomatrixCD">
+<span class="sig-name descname"><span class="pre">GeomatrixCD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GeomatrixCD'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.GeomatrixCD" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.USGSAB">
+<span class="sig-name descname"><span class="pre">USGSAB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USGSAB'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSAB" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.USGSCD">
+<span class="sig-name descname"><span class="pre">USGSCD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USGSCD'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSCD" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.USGSA">
+<span class="sig-name descname"><span class="pre">USGSA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USGSA'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSA" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.USGSB">
+<span class="sig-name descname"><span class="pre">USGSB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USGSB'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSB" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.USGSC">
+<span class="sig-name descname"><span class="pre">USGSC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USGSC'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSC" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.USGSD">
+<span class="sig-name descname"><span class="pre">USGSD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USGSD'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSD" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums._generated.VelocityRandInputMethod.UserDefined">
+<span class="sig-name descname"><span class="pre">UserDefined</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UserDefined'</span></em><a class="headerlink" href="#rsseismic.enums._generated.VelocityRandInputMethod.UserDefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<p>Curve fitting (<code class="docutils literal notranslate"><span class="pre">SoilLayerCurve.runCurveFit</span></code>):</p>
+<p id="module-rsseismic.enums.fitting_procedure">Public enum for soil-layer curve fitting procedures.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.enums.fitting_procedure.FittingProcedureModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.enums.fitting_procedure.</span></span><span class="sig-name descname"><span class="pre">FittingProcedureModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Curve fitting procedure for <code class="docutils literal notranslate"><span class="pre">SoilLayerCurve.runCurveFit</span></code>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums.fitting_procedure.FittingProcedureModel.MRF">
+<span class="sig-name descname"><span class="pre">MRF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MRF'</span></em><a class="headerlink" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRF" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF">
+<span class="sig-name descname"><span class="pre">MRDF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MRDF'</span></em><a class="headerlink" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums.fitting_procedure.FittingProcedureModel.DF">
+<span class="sig-name descname"><span class="pre">DF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DF'</span></em><a class="headerlink" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.DF" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF_UIUC">
+<span class="sig-name descname"><span class="pre">MRDF_UIUC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MRDF_UIUC'</span></em><a class="headerlink" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF_UIUC" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF_Darendeli">
+<span class="sig-name descname"><span class="pre">MRDF_Darendeli</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MRDF_Derendeli'</span></em><a class="headerlink" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF_Darendeli" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rsseismic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rsseismic package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rsseismic.properties.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">rsseismic.properties package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.AnalysisMode"><code class="docutils literal notranslate"><span class="pre">AnalysisMode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.AnalysisMode.Linear"><code class="docutils literal notranslate"><span class="pre">AnalysisMode.Linear</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.AnalysisMode.EquivalentLinear"><code class="docutils literal notranslate"><span class="pre">AnalysisMode.EquivalentLinear</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.AnalysisMode.Nonlinear"><code class="docutils literal notranslate"><span class="pre">AnalysisMode.Nonlinear</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ComplexShearModulusFormulation"><code class="docutils literal notranslate"><span class="pre">ComplexShearModulusFormulation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ComplexShearModulusFormulation.FREQUENCY_INDEPENDENT"><code class="docutils literal notranslate"><span class="pre">ComplexShearModulusFormulation.FREQUENCY_INDEPENDENT</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ComplexShearModulusFormulation.FREQUENCY_DEPENDENT"><code class="docutils literal notranslate"><span class="pre">ComplexShearModulusFormulation.FREQUENCY_DEPENDENT</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ComplexShearModulusFormulation.SIMPLIFIED"><code class="docutils literal notranslate"><span class="pre">ComplexShearModulusFormulation.SIMPLIFIED</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel"><code class="docutils literal notranslate"><span class="pre">CurveModel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.None_"><code class="docutils literal notranslate"><span class="pre">CurveModel.None_</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Amir_Faryar_2016"><code class="docutils literal notranslate"><span class="pre">CurveModel.Amir_Faryar_2016</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Andrus_2003"><code class="docutils literal notranslate"><span class="pre">CurveModel.Andrus_2003</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Darendeli_2001"><code class="docutils literal notranslate"><span class="pre">CurveModel.Darendeli_2001</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Menq_2003"><code class="docutils literal notranslate"><span class="pre">CurveModel.Menq_2003</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Roblee_Chiou_2004"><code class="docutils literal notranslate"><span class="pre">CurveModel.Roblee_Chiou_2004</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Seed_Idriss_Upper_Limit"><code class="docutils literal notranslate"><span class="pre">CurveModel.Seed_Idriss_Upper_Limit</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Seed_Idriss_Mean"><code class="docutils literal notranslate"><span class="pre">CurveModel.Seed_Idriss_Mean</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Seed_Idriss_Lower_Limit"><code class="docutils literal notranslate"><span class="pre">CurveModel.Seed_Idriss_Lower_Limit</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Zhang_2005"><code class="docutils literal notranslate"><span class="pre">CurveModel.Zhang_2005</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.CurveModel.Vucetic_Dobry_1991"><code class="docutils literal notranslate"><span class="pre">CurveModel.Vucetic_Dobry_1991</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.HystereticFormulation"><code class="docutils literal notranslate"><span class="pre">HystereticFormulation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.HystereticFormulation.NonMasing"><code class="docutils literal notranslate"><span class="pre">HystereticFormulation.NonMasing</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.HystereticFormulation.Masing"><code class="docutils literal notranslate"><span class="pre">HystereticFormulation.Masing</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.InputMotionConfiguration"><code class="docutils literal notranslate"><span class="pre">InputMotionConfiguration</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.InputMotionConfiguration.UniDirectional"><code class="docutils literal notranslate"><span class="pre">InputMotionConfiguration.UniDirectional</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.InputMotionConfiguration.BiDirectional"><code class="docutils literal notranslate"><span class="pre">InputMotionConfiguration.BiDirectional</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.IntegrationScheme"><code class="docutils literal notranslate"><span class="pre">IntegrationScheme</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.IntegrationScheme.IMPLICIT_NEWMARK"><code class="docutils literal notranslate"><span class="pre">IntegrationScheme.IMPLICIT_NEWMARK</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.IntegrationScheme.EXPLICIT_HEUN"><code class="docutils literal notranslate"><span class="pre">IntegrationScheme.EXPLICIT_HEUN</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.LayerOutputSetting"><code class="docutils literal notranslate"><span class="pre">LayerOutputSetting</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.LayerOutputSetting.SURFACE_ONLY"><code class="docutils literal notranslate"><span class="pre">LayerOutputSetting.SURFACE_ONLY</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.LayerOutputSetting.ALL_LAYERS"><code class="docutils literal notranslate"><span class="pre">LayerOutputSetting.ALL_LAYERS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.LayerOutputSetting.SPECIFIC_DEPTH"><code class="docutils literal notranslate"><span class="pre">LayerOutputSetting.SPECIFIC_DEPTH</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.LayerOutputSetting.SPECIFIC_LAYERS"><code class="docutils literal notranslate"><span class="pre">LayerOutputSetting.SPECIFIC_LAYERS</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.PWPModel"><code class="docutils literal notranslate"><span class="pre">PWPModel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.PWPModel.Sand_Vucetic_Dobry"><code class="docutils literal notranslate"><span class="pre">PWPModel.Sand_Vucetic_Dobry</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.PWPModel.Clay_Matasovic"><code class="docutils literal notranslate"><span class="pre">PWPModel.Clay_Matasovic</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.PWPModel.Sand_GMP"><code class="docutils literal notranslate"><span class="pre">PWPModel.Sand_GMP</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.PWPModel.Sand_Park_Ahn"><code class="docutils literal notranslate"><span class="pre">PWPModel.Sand_Park_Ahn</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.PWPModel.General_Berrill_Davis"><code class="docutils literal notranslate"><span class="pre">PWPModel.General_Berrill_Davis</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.PWPModel.None_"><code class="docutils literal notranslate"><span class="pre">PWPModel.None_</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ReductionFactorFormulation"><code class="docutils literal notranslate"><span class="pre">ReductionFactorFormulation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ReductionFactorFormulation.MRDF_UIUC"><code class="docutils literal notranslate"><span class="pre">ReductionFactorFormulation.MRDF_UIUC</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ReductionFactorFormulation.MRDF_Darendeli"><code class="docutils literal notranslate"><span class="pre">ReductionFactorFormulation.MRDF_Darendeli</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.ReductionFactorFormulation.None_"><code class="docutils literal notranslate"><span class="pre">ReductionFactorFormulation.None_</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilModel"><code class="docutils literal notranslate"><span class="pre">SoilModel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilModel.GQ_H"><code class="docutils literal notranslate"><span class="pre">SoilModel.GQ_H</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilModel.MKZ"><code class="docutils literal notranslate"><span class="pre">SoilModel.MKZ</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilModel.Linear"><code class="docutils literal notranslate"><span class="pre">SoilModel.Linear</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilModel.Points"><code class="docutils literal notranslate"><span class="pre">SoilModel.Points</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilModel.Yee"><code class="docutils literal notranslate"><span class="pre">SoilModel.Yee</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilType"><code class="docutils literal notranslate"><span class="pre">SoilType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilType.Sand"><code class="docutils literal notranslate"><span class="pre">SoilType.Sand</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilType.Clay"><code class="docutils literal notranslate"><span class="pre">SoilType.Clay</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SoilType.UserDefined"><code class="docutils literal notranslate"><span class="pre">SoilType.UserDefined</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SolutionType"><code class="docutils literal notranslate"><span class="pre">SolutionType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SolutionType.FrequencyDomain"><code class="docutils literal notranslate"><span class="pre">SolutionType.FrequencyDomain</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SolutionType.TimeDomain"><code class="docutils literal notranslate"><span class="pre">SolutionType.TimeDomain</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SolutionType.StrainDomain"><code class="docutils literal notranslate"><span class="pre">SolutionType.StrainDomain</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SolverType"><code class="docutils literal notranslate"><span class="pre">SolverType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SolverType.LumpedMassModel"><code class="docutils literal notranslate"><span class="pre">SolverType.LumpedMassModel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.SolverType.FiniteElementMethod"><code class="docutils literal notranslate"><span class="pre">SolverType.FiniteElementMethod</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.StepControl"><code class="docutils literal notranslate"><span class="pre">StepControl</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.StepControl.FLEXIBLE"><code class="docutils literal notranslate"><span class="pre">StepControl.FLEXIBLE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.StepControl.FIXED"><code class="docutils literal notranslate"><span class="pre">StepControl.FIXED</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.TimeHistoryInterpolationMethod"><code class="docutils literal notranslate"><span class="pre">TimeHistoryInterpolationMethod</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.TimeHistoryInterpolationMethod.LINEAR"><code class="docutils literal notranslate"><span class="pre">TimeHistoryInterpolationMethod.LINEAR</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.TimeHistoryInterpolationMethod.ZERO_PADDED"><code class="docutils literal notranslate"><span class="pre">TimeHistoryInterpolationMethod.ZERO_PADDED</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VaryWithDepthOption"><code class="docutils literal notranslate"><span class="pre">VaryWithDepthOption</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VaryWithDepthOption.Constant_Value"><code class="docutils literal notranslate"><span class="pre">VaryWithDepthOption.Constant_Value</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VaryWithDepthOption.Vary_With_Depth"><code class="docutils literal notranslate"><span class="pre">VaryWithDepthOption.Vary_With_Depth</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.GeomatrixAB"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.GeomatrixAB</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.GeomatrixCD"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.GeomatrixCD</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSAB"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.USGSAB</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSCD"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.USGSCD</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSA"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.USGSA</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSB"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.USGSB</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSC"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.USGSC</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.USGSD"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.USGSD</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums._generated.VelocityRandInputMethod.UserDefined"><code class="docutils literal notranslate"><span class="pre">VelocityRandInputMethod.UserDefined</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel"><code class="docutils literal notranslate"><span class="pre">FittingProcedureModel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRF"><code class="docutils literal notranslate"><span class="pre">FittingProcedureModel.MRF</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF"><code class="docutils literal notranslate"><span class="pre">FittingProcedureModel.MRDF</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.DF"><code class="docutils literal notranslate"><span class="pre">FittingProcedureModel.DF</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF_UIUC"><code class="docutils literal notranslate"><span class="pre">FittingProcedureModel.MRDF_UIUC</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.enums.fitting_procedure.FittingProcedureModel.MRDF_Darendeli"><code class="docutils literal notranslate"><span class="pre">FittingProcedureModel.MRDF_Darendeli</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generatedAPIDocFiles/rsseismic.enums.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rocscience Inc..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

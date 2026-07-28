@@ -1,0 +1,824 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rsseismic.properties.projectSettings package &#8212; RSSeismic Scripting Reference Manual  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generatedAPIDocFiles/rsseismic.properties.projectSettings';</script>
+    <link rel="icon" href="../_static/rocscience_favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="rsseismic.properties.referenceCurve package" href="rsseismic.properties.referenceCurve.html" />
+    <link rel="prev" title="rsseismic.properties.profileGenerationSettings package" href="rsseismic.properties.profileGenerationSettings.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-light" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-dark pst-js-only" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.enums.html">rsseismic.enums package</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="rsseismic.properties.html">rsseismic.properties package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.bedrockLayer.html">rsseismic.properties.bedrockLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.meanProfileSoilLayer.html">rsseismic.properties.meanProfileSoilLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.profileGenerationSettings.html">rsseismic.properties.profileGenerationSettings package</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">rsseismic.properties.projectSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.referenceCurve.html">rsseismic.properties.referenceCurve package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.soilLayer.html">rsseismic.properties.soilLayer package</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerCurve.html">rsseismic.SoilLayerCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerOperations.html">rsseismic.SoilLayerOperations module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.exceptions.html">rsseismic.exceptions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.types.html">rsseismic.types module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="rsseismic.html" class="nav-link">rsseismic package</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="rsseismic.properties.html" class="nav-link">rsseismic.properties package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rsseismic.properties.projectSettings package</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rsseismic-properties-projectsettings-package">
+<h1>rsseismic.properties.projectSettings package<a class="headerlink" href="#rsseismic-properties-projectsettings-package" title="Link to this heading">#</a></h1>
+<p>Typed getters and setters mixed into <a class="reference internal" href="rsseismic.ProjectSettings.html#module-rsseismic.ProjectSettings" title="rsseismic.ProjectSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">rsseismic.ProjectSettings</span></code></a>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.properties.projectSettings._generated.</span></span><span class="sig-name descname"><span class="pre">ProjectSettingsPropertiesMixin</span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Typed get/set helpers for generic property RPCs (uses self.Data).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getAnalysisMethod">
+<span class="sig-name descname"><span class="pre">getAnalysisMethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.AnalysisMode" title="rsseismic.enums._generated.AnalysisMode"><span class="pre">AnalysisMode</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getAnalysisMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setAnalysisMethod">
+<span class="sig-name descname"><span class="pre">setAnalysisMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.AnalysisMode" title="rsseismic.enums._generated.AnalysisMode"><span class="pre">AnalysisMode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setAnalysisMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getApplyWaterTable">
+<span class="sig-name descname"><span class="pre">getApplyWaterTable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getApplyWaterTable" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setApplyWaterTable">
+<span class="sig-name descname"><span class="pre">setApplyWaterTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setApplyWaterTable" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getAutomaticProfileGeneration">
+<span class="sig-name descname"><span class="pre">getAutomaticProfileGeneration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getAutomaticProfileGeneration" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setAutomaticProfileGeneration">
+<span class="sig-name descname"><span class="pre">setAutomaticProfileGeneration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setAutomaticProfileGeneration" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getBedrockOutputDeconvolution">
+<span class="sig-name descname"><span class="pre">getBedrockOutputDeconvolution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getBedrockOutputDeconvolution" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setBedrockOutputDeconvolution">
+<span class="sig-name descname"><span class="pre">setBedrockOutputDeconvolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setBedrockOutputDeconvolution" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getBottomProfilePermeable">
+<span class="sig-name descname"><span class="pre">getBottomProfilePermeable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getBottomProfilePermeable" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setBottomProfilePermeable">
+<span class="sig-name descname"><span class="pre">setBottomProfilePermeable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setBottomProfilePermeable" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplexShearModulusFormulation">
+<span class="sig-name descname"><span class="pre">getComplexShearModulusFormulation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.ComplexShearModulusFormulation" title="rsseismic.enums._generated.ComplexShearModulusFormulation"><span class="pre">ComplexShearModulusFormulation</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplexShearModulusFormulation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplexShearModulusFormulation">
+<span class="sig-name descname"><span class="pre">setComplexShearModulusFormulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.ComplexShearModulusFormulation" title="rsseismic.enums._generated.ComplexShearModulusFormulation"><span class="pre">ComplexShearModulusFormulation</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplexShearModulusFormulation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplimentaryAnalysisEquivalentLinear">
+<span class="sig-name descname"><span class="pre">getComplimentaryAnalysisEquivalentLinear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplimentaryAnalysisEquivalentLinear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplimentaryAnalysisEquivalentLinear">
+<span class="sig-name descname"><span class="pre">setComplimentaryAnalysisEquivalentLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplimentaryAnalysisEquivalentLinear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplimentaryAnalysisNonlinearTotalStressTimeDomain">
+<span class="sig-name descname"><span class="pre">getComplimentaryAnalysisNonlinearTotalStressTimeDomain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplimentaryAnalysisNonlinearTotalStressTimeDomain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplimentaryAnalysisNonlinearTotalStressTimeDomain">
+<span class="sig-name descname"><span class="pre">setComplimentaryAnalysisNonlinearTotalStressTimeDomain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplimentaryAnalysisNonlinearTotalStressTimeDomain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getDefaultSoilModel">
+<span class="sig-name descname"><span class="pre">getDefaultSoilModel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SoilModel" title="rsseismic.enums._generated.SoilModel"><span class="pre">SoilModel</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getDefaultSoilModel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setDefaultSoilModel">
+<span class="sig-name descname"><span class="pre">setDefaultSoilModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SoilModel" title="rsseismic.enums._generated.SoilModel"><span class="pre">SoilModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setDefaultSoilModel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getDisplacementAnimation">
+<span class="sig-name descname"><span class="pre">getDisplacementAnimation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getDisplacementAnimation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setDisplacementAnimation">
+<span class="sig-name descname"><span class="pre">setDisplacementAnimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setDisplacementAnimation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getEffectiveShearStrainRatio">
+<span class="sig-name descname"><span class="pre">getEffectiveShearStrainRatio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getEffectiveShearStrainRatio" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setEffectiveShearStrainRatio">
+<span class="sig-name descname"><span class="pre">setEffectiveShearStrainRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setEffectiveShearStrainRatio" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getEnableDissipation">
+<span class="sig-name descname"><span class="pre">getEnableDissipation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getEnableDissipation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setEnableDissipation">
+<span class="sig-name descname"><span class="pre">setEnableDissipation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setEnableDissipation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getGenerateExcessPWP">
+<span class="sig-name descname"><span class="pre">getGenerateExcessPWP</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getGenerateExcessPWP" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setGenerateExcessPWP">
+<span class="sig-name descname"><span class="pre">setGenerateExcessPWP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setGenerateExcessPWP" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getHystereticFormulation">
+<span class="sig-name descname"><span class="pre">getHystereticFormulation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.HystereticFormulation" title="rsseismic.enums._generated.HystereticFormulation"><span class="pre">HystereticFormulation</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getHystereticFormulation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setHystereticFormulation">
+<span class="sig-name descname"><span class="pre">setHystereticFormulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.HystereticFormulation" title="rsseismic.enums._generated.HystereticFormulation"><span class="pre">HystereticFormulation</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setHystereticFormulation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getInputMotionConfiguration">
+<span class="sig-name descname"><span class="pre">getInputMotionConfiguration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.InputMotionConfiguration" title="rsseismic.enums._generated.InputMotionConfiguration"><span class="pre">InputMotionConfiguration</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getInputMotionConfiguration" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setInputMotionConfiguration">
+<span class="sig-name descname"><span class="pre">setInputMotionConfiguration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.InputMotionConfiguration" title="rsseismic.enums._generated.InputMotionConfiguration"><span class="pre">InputMotionConfiguration</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setInputMotionConfiguration" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getIntegrationScheme">
+<span class="sig-name descname"><span class="pre">getIntegrationScheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.IntegrationScheme" title="rsseismic.enums._generated.IntegrationScheme"><span class="pre">IntegrationScheme</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getIntegrationScheme" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setIntegrationScheme">
+<span class="sig-name descname"><span class="pre">setIntegrationScheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.IntegrationScheme" title="rsseismic.enums._generated.IntegrationScheme"><span class="pre">IntegrationScheme</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setIntegrationScheme" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getLayerOutputSetting">
+<span class="sig-name descname"><span class="pre">getLayerOutputSetting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.LayerOutputSetting" title="rsseismic.enums._generated.LayerOutputSetting"><span class="pre">LayerOutputSetting</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getLayerOutputSetting" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setLayerOutputSetting">
+<span class="sig-name descname"><span class="pre">setLayerOutputSetting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.LayerOutputSetting" title="rsseismic.enums._generated.LayerOutputSetting"><span class="pre">LayerOutputSetting</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setLayerOutputSetting" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getMaxStrainIncrement">
+<span class="sig-name descname"><span class="pre">getMaxStrainIncrement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getMaxStrainIncrement" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setMaxStrainIncrement">
+<span class="sig-name descname"><span class="pre">setMaxStrainIncrement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setMaxStrainIncrement" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getMultipleProfiles">
+<span class="sig-name descname"><span class="pre">getMultipleProfiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getMultipleProfiles" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setMultipleProfiles">
+<span class="sig-name descname"><span class="pre">setMultipleProfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setMultipleProfiles" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getNumberOfIterations">
+<span class="sig-name descname"><span class="pre">getNumberOfIterations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getNumberOfIterations" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setNumberOfIterations">
+<span class="sig-name descname"><span class="pre">setNumberOfIterations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setNumberOfIterations" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getNumberOfSubIncrements">
+<span class="sig-name descname"><span class="pre">getNumberOfSubIncrements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getNumberOfSubIncrements" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setNumberOfSubIncrements">
+<span class="sig-name descname"><span class="pre">setNumberOfSubIncrements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setNumberOfSubIncrements" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getSolutionType">
+<span class="sig-name descname"><span class="pre">getSolutionType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SolutionType" title="rsseismic.enums._generated.SolutionType"><span class="pre">SolutionType</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getSolutionType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setSolutionType">
+<span class="sig-name descname"><span class="pre">setSolutionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SolutionType" title="rsseismic.enums._generated.SolutionType"><span class="pre">SolutionType</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setSolutionType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getSolverType">
+<span class="sig-name descname"><span class="pre">getSolverType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SolverType" title="rsseismic.enums._generated.SolverType"><span class="pre">SolverType</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getSolverType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setSolverType">
+<span class="sig-name descname"><span class="pre">setSolverType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SolverType" title="rsseismic.enums._generated.SolverType"><span class="pre">SolverType</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setSolverType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getStepControl">
+<span class="sig-name descname"><span class="pre">getStepControl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.StepControl" title="rsseismic.enums._generated.StepControl"><span class="pre">StepControl</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getStepControl" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setStepControl">
+<span class="sig-name descname"><span class="pre">setStepControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.StepControl" title="rsseismic.enums._generated.StepControl"><span class="pre">StepControl</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setStepControl" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTimeHistoryInterpolationMethod">
+<span class="sig-name descname"><span class="pre">getTimeHistoryInterpolationMethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.TimeHistoryInterpolationMethod" title="rsseismic.enums._generated.TimeHistoryInterpolationMethod"><span class="pre">TimeHistoryInterpolationMethod</span></a></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTimeHistoryInterpolationMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTimeHistoryInterpolationMethod">
+<span class="sig-name descname"><span class="pre">setTimeHistoryInterpolationMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.TimeHistoryInterpolationMethod" title="rsseismic.enums._generated.TimeHistoryInterpolationMethod"><span class="pre">TimeHistoryInterpolationMethod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTimeHistoryInterpolationMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTimestepReductionFactor">
+<span class="sig-name descname"><span class="pre">getTimestepReductionFactor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTimestepReductionFactor" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTimestepReductionFactor">
+<span class="sig-name descname"><span class="pre">setTimestepReductionFactor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTimestepReductionFactor" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTopProfilePermeable">
+<span class="sig-name descname"><span class="pre">getTopProfilePermeable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTopProfilePermeable" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTopProfilePermeable">
+<span class="sig-name descname"><span class="pre">setTopProfilePermeable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTopProfilePermeable" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getProperties">
+<span class="sig-name descname"><span class="pre">getProperties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getProperties" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setProperties">
+<span class="sig-name descname"><span class="pre">setProperties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AnalysisMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.AnalysisMode" title="rsseismic.enums._generated.AnalysisMode"><span class="pre">AnalysisMode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ApplyWaterTable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AutomaticProfileGeneration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BedrockOutputDeconvolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BottomProfilePermeable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ComplexShearModulusFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.ComplexShearModulusFormulation" title="rsseismic.enums._generated.ComplexShearModulusFormulation"><span class="pre">ComplexShearModulusFormulation</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ComplimentaryAnalysisEquivalentLinear</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ComplimentaryAnalysisNonlinearTotalStressTimeDomain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DefaultSoilModel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SoilModel" title="rsseismic.enums._generated.SoilModel"><span class="pre">SoilModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DisplacementAnimation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EffectiveShearStrainRatio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EnableDissipation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GenerateExcessPWP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">HystereticFormulation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.HystereticFormulation" title="rsseismic.enums._generated.HystereticFormulation"><span class="pre">HystereticFormulation</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">InputMotionConfiguration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.InputMotionConfiguration" title="rsseismic.enums._generated.InputMotionConfiguration"><span class="pre">InputMotionConfiguration</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IntegrationScheme</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.IntegrationScheme" title="rsseismic.enums._generated.IntegrationScheme"><span class="pre">IntegrationScheme</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LayerOutputSetting</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.LayerOutputSetting" title="rsseismic.enums._generated.LayerOutputSetting"><span class="pre">LayerOutputSetting</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MaxStrainIncrement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MultipleProfiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NumberOfIterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NumberOfSubIncrements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SolutionType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SolutionType" title="rsseismic.enums._generated.SolutionType"><span class="pre">SolutionType</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SolverType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.SolverType" title="rsseismic.enums._generated.SolverType"><span class="pre">SolverType</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">StepControl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.StepControl" title="rsseismic.enums._generated.StepControl"><span class="pre">StepControl</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TimeHistoryInterpolationMethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.enums.html#rsseismic.enums._generated.TimeHistoryInterpolationMethod" title="rsseismic.enums._generated.TimeHistoryInterpolationMethod"><span class="pre">TimeHistoryInterpolationMethod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TimestepReductionFactor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TopProfilePermeable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setProperties" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rsseismic.properties.profileGenerationSettings.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rsseismic.properties.profileGenerationSettings package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rsseismic.properties.referenceCurve.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">rsseismic.properties.referenceCurve package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getAnalysisMethod"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getAnalysisMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setAnalysisMethod"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setAnalysisMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getApplyWaterTable"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getApplyWaterTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setApplyWaterTable"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setApplyWaterTable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getAutomaticProfileGeneration"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getAutomaticProfileGeneration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setAutomaticProfileGeneration"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setAutomaticProfileGeneration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getBedrockOutputDeconvolution"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getBedrockOutputDeconvolution()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setBedrockOutputDeconvolution"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setBedrockOutputDeconvolution()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getBottomProfilePermeable"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getBottomProfilePermeable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setBottomProfilePermeable"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setBottomProfilePermeable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplexShearModulusFormulation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getComplexShearModulusFormulation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplexShearModulusFormulation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setComplexShearModulusFormulation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplimentaryAnalysisEquivalentLinear"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getComplimentaryAnalysisEquivalentLinear()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplimentaryAnalysisEquivalentLinear"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setComplimentaryAnalysisEquivalentLinear()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getComplimentaryAnalysisNonlinearTotalStressTimeDomain"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getComplimentaryAnalysisNonlinearTotalStressTimeDomain()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setComplimentaryAnalysisNonlinearTotalStressTimeDomain"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setComplimentaryAnalysisNonlinearTotalStressTimeDomain()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getDefaultSoilModel"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getDefaultSoilModel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setDefaultSoilModel"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setDefaultSoilModel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getDisplacementAnimation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getDisplacementAnimation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setDisplacementAnimation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setDisplacementAnimation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getEffectiveShearStrainRatio"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getEffectiveShearStrainRatio()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setEffectiveShearStrainRatio"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setEffectiveShearStrainRatio()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getEnableDissipation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getEnableDissipation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setEnableDissipation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setEnableDissipation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getGenerateExcessPWP"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getGenerateExcessPWP()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setGenerateExcessPWP"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setGenerateExcessPWP()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getHystereticFormulation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getHystereticFormulation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setHystereticFormulation"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setHystereticFormulation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getInputMotionConfiguration"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getInputMotionConfiguration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setInputMotionConfiguration"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setInputMotionConfiguration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getIntegrationScheme"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getIntegrationScheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setIntegrationScheme"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setIntegrationScheme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getLayerOutputSetting"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getLayerOutputSetting()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setLayerOutputSetting"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setLayerOutputSetting()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getMaxStrainIncrement"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getMaxStrainIncrement()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setMaxStrainIncrement"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setMaxStrainIncrement()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getMultipleProfiles"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getMultipleProfiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setMultipleProfiles"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setMultipleProfiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getNumberOfIterations"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getNumberOfIterations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setNumberOfIterations"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setNumberOfIterations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getNumberOfSubIncrements"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getNumberOfSubIncrements()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setNumberOfSubIncrements"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setNumberOfSubIncrements()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getSolutionType"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getSolutionType()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setSolutionType"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setSolutionType()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getSolverType"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getSolverType()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setSolverType"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setSolverType()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getStepControl"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getStepControl()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setStepControl"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setStepControl()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTimeHistoryInterpolationMethod"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getTimeHistoryInterpolationMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTimeHistoryInterpolationMethod"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setTimeHistoryInterpolationMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTimestepReductionFactor"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getTimestepReductionFactor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTimestepReductionFactor"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setTimestepReductionFactor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getTopProfilePermeable"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getTopProfilePermeable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setTopProfilePermeable"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setTopProfilePermeable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.getProperties"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.getProperties()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.properties.projectSettings._generated.ProjectSettingsPropertiesMixin.setProperties"><code class="docutils literal notranslate"><span class="pre">ProjectSettingsPropertiesMixin.setProperties()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generatedAPIDocFiles/rsseismic.properties.projectSettings.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rocscience Inc..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
