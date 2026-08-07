@@ -64,5 +64,8 @@ For method-level detail, use the [Scripting reference manual](https://rocscience
 
 ## Getting Started
 
-- **Tutorials and workflows (Rocscience Help):** https://www.rocscience.com/help/rsseismic/tutorials/
-- **Product documentation:** https://www.rocscience.com/help/rsseismic/documentation/
+- **Getting started guide** 
+https://www.rocscience.com/help/rsseismic/tutorials/scripting/getting-started-with-rsseismic-python-scripting
+- **Tutorials** 
+https://www.rocscience.com/help/rsseismic/tutorials/scripting/building-a-single-profile-and-running-an-analysis
+https://www.rocscience.com/help/rsseismic/tutorials/scripting/building-multiple-projects-and-running-batch-processing
