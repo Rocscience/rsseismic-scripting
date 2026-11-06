@@ -277,13 +277,18 @@
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.DampingFormulation.html">rsseismic.DampingFormulation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ElementTestLayer.html">rsseismic.ElementTestLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motion.html">rsseismic.Motion module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Preferences.html">rsseismic.Preferences module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.RSLog.html">rsseismic.RSLog module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.Results module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
@@ -398,6 +403,18 @@ the Motion view, especially for complementary analyses.</p>
 <p>Includes complementary motions when project settings add them (for example
 <code class="docutils literal notranslate"><span class="pre">ChiChi-EL</span></code> derived from selected motion <code class="docutils literal notranslate"><span class="pre">ChiChi</span></code>). Prefer these names over
 Motion-view labels when fetching results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Results.Results.exportReportToPdf">
+<span class="sig-name descname"><span class="pre">exportReportToPdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#rsseismic.Results.Results.exportReportToPdf" title="Link to this definition">#</a></dt>
+<dd><p>Export the analysis report to a PDF file without opening the report previewer.</p>
+<p>Works on new/unsaved projects. If the project is saved and a matching <code class="docutils literal notranslate"><span class="pre">.infv</span></code>
+preferences file exists beside it, report layout preferences are applied;
+otherwise default layout is used. Chart images are included when the Results
+view has loaded computed results; otherwise tables and text sections are still
+exported.</p>
+<p>Returns the <code class="docutils literal notranslate"><span class="pre">outputPath</span></code> written.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -557,6 +574,7 @@ instead of raising an error.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Results.Results.listResultDatabases"><code class="docutils literal notranslate"><span class="pre">Results.listResultDatabases()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Results.Results.getResultDatabasePath"><code class="docutils literal notranslate"><span class="pre">Results.getResultDatabasePath()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Results.Results.listResultMotions"><code class="docutils literal notranslate"><span class="pre">Results.listResultMotions()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Results.Results.exportReportToPdf"><code class="docutils literal notranslate"><span class="pre">Results.exportReportToPdf()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Results.Results.listResultLayers"><code class="docutils literal notranslate"><span class="pre">Results.listResultLayers()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Results.Results.getTopOfRockLayerId"><code class="docutils literal notranslate"><span class="pre">Results.getTopOfRockLayerId()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Results.Results.getLayerTimeHistoryDataFrame"><code class="docutils literal notranslate"><span class="pre">Results.getLayerTimeHistoryDataFrame()</span></code></a></li>

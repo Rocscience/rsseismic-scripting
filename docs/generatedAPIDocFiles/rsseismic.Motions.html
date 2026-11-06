@@ -49,8 +49,8 @@
     <link rel="icon" href="../_static/rocscience_favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="rsseismic.ProfileGenerationSettings module" href="rsseismic.ProfileGenerationSettings.html" />
-    <link rel="prev" title="rsseismic.Model module" href="rsseismic.Model.html" />
+    <link rel="next" title="rsseismic.Preferences module" href="rsseismic.Preferences.html" />
+    <link rel="prev" title="rsseismic.Motion module" href="rsseismic.Motion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -277,13 +277,18 @@
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.DampingFormulation.html">rsseismic.DampingFormulation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ElementTestLayer.html">rsseismic.ElementTestLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motion.html">rsseismic.Motion module</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Preferences.html">rsseismic.Preferences module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.RSLog.html">rsseismic.RSLog module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
@@ -416,25 +421,25 @@ Selecting a pair selects both horizontal components.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="rsseismic.Motions.Motions.selectAllMotions">
 <span class="sig-name descname"><span class="pre">selectAllMotions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motions.Motions.selectAllMotions" title="Link to this definition">#</a></dt>
-<dd><p>Select all motions (uni-directional) or all motion pairs (bi-directional).</p>
+<dd><p>Select all motions (uni-directional) or all pairs (bi-directional).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rsseismic.Motions.Motions.deselectAllMotions">
 <span class="sig-name descname"><span class="pre">deselectAllMotions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motions.Motions.deselectAllMotions" title="Link to this definition">#</a></dt>
-<dd><p>Deselect all motions (uni-directional) or all motion pairs (bi-directional).</p>
+<dd><p>Deselect all motions (uni-directional) or all pairs (bi-directional).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rsseismic.Motions.Motions.selectAllMotionsInDirectory">
 <span class="sig-name descname"><span class="pre">selectAllMotionsInDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motionDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motions.Motions.selectAllMotionsInDirectory" title="Link to this definition">#</a></dt>
-<dd><p>Select all motions or pairs (by H1 folder) whose files are in the given directory.</p>
+<dd><p>Select all motions or pairs (by folder) in the given directory.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rsseismic.Motions.Motions.deselectAllMotionsInDirectory">
 <span class="sig-name descname"><span class="pre">deselectAllMotionsInDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motionDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motions.Motions.deselectAllMotionsInDirectory" title="Link to this definition">#</a></dt>
-<dd><p>Deselect all motions or pairs (by H1 folder) whose files are in the given directory.</p>
+<dd><p>Deselect all motions or pairs (by folder) in the given directory.</p>
 </dd></dl>
 
 </dd></dl>
@@ -452,20 +457,20 @@ Selecting a pair selects both horizontal components.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="rsseismic.Model.html"
+       href="rsseismic.Motion.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">rsseismic.Model module</p>
+        <p class="prev-next-title">rsseismic.Motion module</p>
       </div>
     </a>
     <a class="right-next"
-       href="rsseismic.ProfileGenerationSettings.html"
+       href="rsseismic.Preferences.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">rsseismic.ProfileGenerationSettings module</p>
+        <p class="prev-next-title">rsseismic.Preferences module</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
