@@ -1,0 +1,9 @@
+setting,value,notes
+site_latitude,33.953,NSHMP / automatic record selection
+site_longitude,-118.339,
+num_profiles,5,generateProfiles count
+velocity_randomization,true,
+velocity_input_method,GeomatrixAB,
+seed,0,0 = server picks random seed
+thickness_randomization,false,
+dynamic_curve_randomization,false,

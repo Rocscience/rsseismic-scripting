@@ -1,0 +1,23 @@
+csv_column,rsseismic_target,property_or_api,notes
+layer,(row index),,1-based layer number for reference only
+below_water_table,layer or project,applyWaterTable / layer flag,TBD in script — 0 above / 1 below water table
+thickness_m,MeanProfileSoilLayer,Thickness,m
+unit_weight,MeanProfileSoilLayer,UnitWeight,kN/m3
+vs_m_s,MeanProfileSoilLayer,ShearWaveVelocity,m/s
+shear_strength_kPa,MeanProfileSoilLayer,ShearStrength,kPa
+soil_type,ReferenceCurve,SoilType,e.g. Sand
+curve_model,ReferenceCurve,CurveModel,e.g. Darendeli_2001
+reduction_factor_formulation,SoilLayerCurve,runCurveFit,e.g. MRDF_UIUC
+OCR,ReferenceCurve,OCR,
+K0,ReferenceCurve,Ko,column named K0 in CSV
+N,ReferenceCurve,N,SPT N if used by model
+PI,ReferenceCurve,PI,plasticity index
+poissons_ratio,SoilLayer,PoissonRatio,
+a0_fem,SoilLayer,A0,a0_FEM
+a1_fem,SoilLayer,A1,a1_FEM
+a2_fem,SoilLayer,A2,a2_FEM
+b_exp,SoilLayer,BExp,b_exp
+A0_volumetric,SoilLayer,A0VolumetricResponse,A0 volumetric response
+eta_dsr,SoilLayer,EtaDsr,Eta_dsr
+permeability_fem,SoilLayer,Permeability,Permeability_FEM
+porosity_fem,SoilLayer,Porosity,Porosity_FEM

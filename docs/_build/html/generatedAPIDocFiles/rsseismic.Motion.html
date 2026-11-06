@@ -1,0 +1,907 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rsseismic.Motion module &#8212; RSSeismic Scripting Reference Manual  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generatedAPIDocFiles/rsseismic.Motion';</script>
+    <link rel="icon" href="../_static/rocscience_favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="rsseismic.Motions module" href="rsseismic.Motions.html" />
+    <link rel="prev" title="rsseismic.Model module" href="rsseismic.Model.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-light" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-dark pst-js-only" alt="RSSeismic Scripting Reference Manual  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rsseismic.html">
+    rsseismic package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.enums.html">rsseismic.enums package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rsseismic.properties.html">rsseismic.properties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.bedrockLayer.html">rsseismic.properties.bedrockLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.meanProfileSoilLayer.html">rsseismic.properties.meanProfileSoilLayer package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.profileGenerationSettings.html">rsseismic.properties.profileGenerationSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.projectSettings.html">rsseismic.properties.projectSettings package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.referenceCurve.html">rsseismic.properties.referenceCurve package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsseismic.properties.soilLayer.html">rsseismic.properties.soilLayer package</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.DampingFormulation.html">rsseismic.DampingFormulation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ElementTestLayer.html">rsseismic.ElementTestLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.Motion module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Preferences.html">rsseismic.Preferences module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.RSLog.html">rsseismic.RSLog module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerCurve.html">rsseismic.SoilLayerCurve module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayerOperations.html">rsseismic.SoilLayerOperations module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.exceptions.html">rsseismic.exceptions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.types.html">rsseismic.types module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="rsseismic.html" class="nav-link">rsseismic package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rsseismic.Motion module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-rsseismic.Motion">
+<span id="rsseismic-motion-module"></span><h1>rsseismic.Motion module<a class="headerlink" href="#module-rsseismic.Motion" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Motion.DiscoveredMotionPairs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Motion.</span></span><span class="sig-name descname"><span class="pre">DiscoveredMotionPairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folderPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionPairInfo" title="rsseismic.types.MotionPairInfo"><span class="pre">MotionPairInfo</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Motion.DiscoveredMotionPairs" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Motion pairs discovered in a folder for Manual match-to-target selection.</p>
+<p>Selection starts empty. Call <code class="docutils literal notranslate"><span class="pre">select</span></code> / <code class="docutils literal notranslate"><span class="pre">selectAll</span></code>, then pass
+<code class="docutils literal notranslate"><span class="pre">selectedPairs</span></code> into <code class="docutils literal notranslate"><span class="pre">MotionLibrary.matchToTargetSpectraManual</span></code>.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Motion.DiscoveredMotionPairs.folderPath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">folderPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.Motion.DiscoveredMotionPairs.folderPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Motion.DiscoveredMotionPairs.allPairs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">allPairs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionPairInfo" title="rsseismic.types.MotionPairInfo"><span class="pre">MotionPairInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rsseismic.Motion.DiscoveredMotionPairs.allPairs" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Motion.DiscoveredMotionPairs.selectedPairs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selectedPairs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionPairInfo" title="rsseismic.types.MotionPairInfo"><span class="pre">MotionPairInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#rsseismic.Motion.DiscoveredMotionPairs.selectedPairs" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.DiscoveredMotionPairs.select">
+<span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pairIds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selectOnlyListed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motion.DiscoveredMotionPairs.select" title="Link to this definition">#</a></dt>
+<dd><p>Select pairs by <code class="docutils literal notranslate"><span class="pre">pairId</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">selectOnlyListed</span></code> is True (default), only the listed ids remain
+selected. When False, listed ids are added to the current selection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.DiscoveredMotionPairs.selectAll">
+<span class="sig-name descname"><span class="pre">selectAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motion.DiscoveredMotionPairs.selectAll" title="Link to this definition">#</a></dt>
+<dd><p>Select every discovered pair.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.DiscoveredMotionPairs.deselectAll">
+<span class="sig-name descname"><span class="pre">deselectAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motion.DiscoveredMotionPairs.deselectAll" title="Link to this definition">#</a></dt>
+<dd><p>Clear the selection.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Motion.</span></span><span class="sig-name descname"><span class="pre">MotionLibrary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>App-level ground motion library (Motion Manager).</p>
+<p>No project is required. Use <code class="docutils literal notranslate"><span class="pre">getMotion(name)</span></code> for one motion (file name without
+extension), or <code class="docutils literal notranslate"><span class="pre">getMotionPair(pairId)</span></code> for a horizontal pair (shared name prefix
+of the H1 and H2 files). Use <code class="docutils literal notranslate"><span class="pre">getUnitSystem</span></code> / <code class="docutils literal notranslate"><span class="pre">changeUnitSystem</span></code> to switch
+Motion Manager display units (Metric or Imperial) for this session.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.getMotion">
+<span class="sig-name descname"><span class="pre">getMotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rsseismic.Motion.Motion" title="rsseismic.Motion.Motion"><span class="pre">Motion</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.getMotion" title="Link to this definition">#</a></dt>
+<dd><p>Return one motion from the library.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.getMotionPair">
+<span class="sig-name descname"><span class="pre">getMotionPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pairId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rsseismic.Motion.MotionPair" title="rsseismic.Motion.MotionPair"><span class="pre">MotionPair</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.getMotionPair" title="Link to this definition">#</a></dt>
+<dd><p>Return one horizontal motion pair from the library.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.getUnitSystem">
+<span class="sig-name descname"><span class="pre">getUnitSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.UnitSystem" title="rsseismic.types.UnitSystem"><span class="pre">UnitSystem</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.getUnitSystem" title="Link to this definition">#</a></dt>
+<dd><p>Return the Motion Manager display unit system (Metric or Imperial).</p>
+<p>This is independent of the open project’s unit system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.changeUnitSystem">
+<span class="sig-name descname"><span class="pre">changeUnitSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unitSystem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.UnitSystem" title="rsseismic.types.UnitSystem"><span class="pre">UnitSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.UnitSystem" title="rsseismic.types.UnitSystem"><span class="pre">UnitSystem</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.changeUnitSystem" title="Link to this definition">#</a></dt>
+<dd><p>Switch Motion Manager display units between Metric and Imperial.</p>
+<p>Affects properties and tables from the motion library for this session.
+Does not change the open project’s unit system or Preferences. Returns the
+unit system now in effect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.convertMotionText">
+<span class="sig-name descname"><span class="pre">convertMotionText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceFilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accelerationUnit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionAccelerationUnit" title="rsseismic.types.MotionAccelerationUnit"><span class="pre">MotionAccelerationUnit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionConvertLayout" title="rsseismic.types.MotionConvertLayout"><span class="pre">MotionConvertLayout</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">MotionConvertLayout.ACCELERATION_ONLY</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionConvertDelimiter" title="rsseismic.types.MotionConvertDelimiter"><span class="pre">MotionConvertDelimiter</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">MotionConvertDelimiter.SPACE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hasTimeStep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accelerationColumn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeColumn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">firstLine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lastLine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.ConvertMotionResult" title="rsseismic.types.ConvertMotionResult"><span class="pre">ConvertMotionResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.convertMotionText" title="Link to this definition">#</a></dt>
+<dd><p>Convert a text motion file and add it to the motion library.</p>
+<p><code class="docutils literal notranslate"><span class="pre">outputDirectory</span></code> must be one of the Motion Manager preference folders.
+For <code class="docutils literal notranslate"><span class="pre">MotionConvertLayout.ACCELERATION_ONLY</span></code>, set <code class="docutils literal notranslate"><span class="pre">hasTimeStep=True</span></code> and
+provide <code class="docutils literal notranslate"><span class="pre">timeStep</span></code>. For <code class="docutils literal notranslate"><span class="pre">MotionConvertLayout.TIME_AND_ACCELERATION</span></code>, the
+timestep is read from the file. Set <code class="docutils literal notranslate"><span class="pre">lastLine</span></code> to 0 to read through the end
+of the file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.convertMotionAT2">
+<span class="sig-name descname"><span class="pre">convertMotionAT2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceFilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accelerationUnit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionAccelerationUnit" title="rsseismic.types.MotionAccelerationUnit"><span class="pre">MotionAccelerationUnit</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.ConvertMotionResult" title="rsseismic.types.ConvertMotionResult"><span class="pre">ConvertMotionResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.convertMotionAT2" title="Link to this definition">#</a></dt>
+<dd><p>Convert a PEER AT2 acceleration record and add it to the motion library.</p>
+<p><code class="docutils literal notranslate"><span class="pre">outputDirectory</span></code> must be one of the Motion Manager preference folders.
+Leave <code class="docutils literal notranslate"><span class="pre">accelerationUnit</span></code> as <code class="docutils literal notranslate"><span class="pre">None</span></code> to auto-detect the unit from the AT2 header.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.deleteMotions">
+<span class="sig-name descname"><span class="pre">deleteMotions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motionNames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.DeleteMotionsResult" title="rsseismic.types.DeleteMotionsResult"><span class="pre">DeleteMotionsResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.deleteMotions" title="Link to this definition">#</a></dt>
+<dd><p>Delete motions from the library by name.</p>
+<p>Removes the motion files from disk and updates the Motion Manager list.
+Names that were not found or could not be deleted are returned in
+<code class="docutils literal notranslate"><span class="pre">failedMotionNames</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.authenticateDatabase">
+<span class="sig-name descname"><span class="pre">authenticateDatabase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.GroundMotionDatabase" title="rsseismic.types.GroundMotionDatabase"><span class="pre">GroundMotionDatabase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.authenticateDatabase" title="Link to this definition">#</a></dt>
+<dd><p>Authenticate against an external ground-motion database for this session.</p>
+<p>Call once before <code class="docutils literal notranslate"><span class="pre">searchDatabaseRecords</span></code> / <code class="docutils literal notranslate"><span class="pre">importDatabaseRecords</span></code> /
+<code class="docutils literal notranslate"><span class="pre">matchToTargetSpectraAutomatic</span></code>. Password may be omitted for
+username-only databases (e.g. CESMD).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.searchDatabaseRecords">
+<span class="sig-name descname"><span class="pre">searchDatabaseRecords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.GroundMotionDatabase" title="rsseismic.types.GroundMotionDatabase"><span class="pre">GroundMotionDatabase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.DatabaseSearchFilters" title="rsseismic.types.DatabaseSearchFilters"><span class="pre">DatabaseSearchFilters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxResults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.DatabaseRecordInfo" title="rsseismic.types.DatabaseRecordInfo"><span class="pre">DatabaseRecordInfo</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.searchDatabaseRecords" title="Link to this definition">#</a></dt>
+<dd><p>Search an external ground-motion database and return matching records.</p>
+<p>Call <code class="docutils literal notranslate"><span class="pre">authenticateDatabase</span></code> for this database first. Pass selected
+records from this result into <code class="docutils literal notranslate"><span class="pre">importDatabaseRecords</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">maxResults</span></code> optionally caps how many records the server returns
+(omit or <code class="docutils literal notranslate"><span class="pre">None</span></code> / <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">0</span></code> = no scripting-side truncate).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.importDatabaseRecords">
+<span class="sig-name descname"><span class="pre">importDatabaseRecords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.GroundMotionDatabase" title="rsseismic.types.GroundMotionDatabase"><span class="pre">GroundMotionDatabase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.DatabaseRecordInfo" title="rsseismic.types.DatabaseRecordInfo"><span class="pre">DatabaseRecordInfo</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.ImportDatabaseRecordsResult" title="rsseismic.types.ImportDatabaseRecordsResult"><span class="pre">ImportDatabaseRecordsResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.importDatabaseRecords" title="Link to this definition">#</a></dt>
+<dd><p>Download selected database records into a Motion Manager preference folder.</p>
+<p>Call <code class="docutils literal notranslate"><span class="pre">authenticateDatabase</span></code> for this database first.
+<code class="docutils literal notranslate"><span class="pre">outputDirectory</span></code> must already be listed in Preferences → Motions.
+Records that fail to download or save are returned in <code class="docutils literal notranslate"><span class="pre">failedRecordIds</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.discoverMotionPairsInFolder">
+<span class="sig-name descname"><span class="pre">discoverMotionPairsInFolder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folderPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rsseismic.Motion.DiscoveredMotionPairs" title="rsseismic.Motion.DiscoveredMotionPairs"><span class="pre">DiscoveredMotionPairs</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.discoverMotionPairsInFolder" title="Link to this definition">#</a></dt>
+<dd><p>Scan a folder (and subfolders) for horizontal motion pairs.</p>
+<p>The returned <code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs</span></code> has an empty selection. Call
+<code class="docutils literal notranslate"><span class="pre">select</span></code> / <code class="docutils literal notranslate"><span class="pre">selectAll</span></code>, then pass <code class="docutils literal notranslate"><span class="pre">selectedPairs</span></code> to
+<code class="docutils literal notranslate"><span class="pre">matchToTargetSpectraManual</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.getTargetSpectra">
+<span class="sig-name descname"><span class="pre">getTargetSpectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.UserDefinedTargetSpectraModel" title="rsseismic.types.UserDefinedTargetSpectraModel"><span class="pre">UserDefinedTargetSpectraModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.RexelTargetSpectraModel" title="rsseismic.types.RexelTargetSpectraModel"><span class="pre">RexelTargetSpectraModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.NshmpTargetSpectraModel" title="rsseismic.types.NshmpTargetSpectraModel"><span class="pre">NshmpTargetSpectraModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.TargetSpectra" title="rsseismic.types.TargetSpectra"><span class="pre">TargetSpectra</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.getTargetSpectra" title="Link to this definition">#</a></dt>
+<dd><p>Generate or load target spectra from a wizard-style model.</p>
+<p>Pass one of:
+- <code class="docutils literal notranslate"><span class="pre">UserDefinedTargetSpectraModel(filePath)</span></code>
+- <code class="docutils literal notranslate"><span class="pre">RexelTargetSpectraModel(...)</span></code>
+- <code class="docutils literal notranslate"><span class="pre">NshmpTargetSpectraModel(...)</span></code></p>
+<p>User-defined loads period–Sa points from the spectrum file. REXEL / NSHMP
+call the remote services and return resolved period–Sa points.</p>
+<p>For REXEL, omit fields to use server/UI defaults (NTC18, Rome
+latitude/longitude, soil class A, and other code-specific wizard
+defaults). Which extra fields apply depends on <code class="docutils literal notranslate"><span class="pre">seismicCode</span></code>.</p>
+<p>For NSHMP, <code class="docutils literal notranslate"><span class="pre">longitude</span></code> / <code class="docutils literal notranslate"><span class="pre">latitude</span></code> are required; omit other fields
+to use server/UI defaults (Conterminous U.S. 2018, vs30 760, AFE 2475,
+truncate/maxdir false).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.matchToTargetSpectraManual">
+<span class="sig-name descname"><span class="pre">matchToTargetSpectraManual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetSpectra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.TargetSpectra" title="rsseismic.types.TargetSpectra"><span class="pre">TargetSpectra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionPairInfo" title="rsseismic.types.MotionPairInfo"><span class="pre">MotionPairInfo</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.AmplitudeScalingParams" title="rsseismic.types.AmplitudeScalingParams"><span class="pre">AmplitudeScalingParams</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MatchToTargetSpectraResult" title="rsseismic.types.MatchToTargetSpectraResult"><span class="pre">MatchToTargetSpectraResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.matchToTargetSpectraManual" title="Link to this definition">#</a></dt>
+<dd><p>Amplitude-scale selected motion pairs to target spectra.</p>
+<p><code class="docutils literal notranslate"><span class="pre">targetSpectra</span></code> is a period–Sa list (build manually, or from
+<code class="docutils literal notranslate"><span class="pre">getTargetSpectra</span></code> with a model such as
+<code class="docutils literal notranslate"><span class="pre">UserDefinedTargetSpectraModel(path)</span></code>). <code class="docutils literal notranslate"><span class="pre">pairs</span></code> must be an explicit
+list (typically <code class="docutils literal notranslate"><span class="pre">discovered.selectedPairs</span></code>). <code class="docutils literal notranslate"><span class="pre">outputDirectory</span></code> must
+already be listed in Preferences → Motions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionLibrary.matchToTargetSpectraAutomatic">
+<span class="sig-name descname"><span class="pre">matchToTargetSpectraAutomatic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.GroundMotionDatabase" title="rsseismic.types.GroundMotionDatabase"><span class="pre">GroundMotionDatabase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.DatabaseSearchFilters" title="rsseismic.types.DatabaseSearchFilters"><span class="pre">DatabaseSearchFilters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetSpectra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.TargetSpectra" title="rsseismic.types.TargetSpectra"><span class="pre">TargetSpectra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputDirectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.RecordSelectionParams" title="rsseismic.types.RecordSelectionParams"><span class="pre">RecordSelectionParams</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.AmplitudeScalingParams" title="rsseismic.types.AmplitudeScalingParams"><span class="pre">AmplitudeScalingParams</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MatchToTargetSpectraResult" title="rsseismic.types.MatchToTargetSpectraResult"><span class="pre">MatchToTargetSpectraResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionLibrary.matchToTargetSpectraAutomatic" title="Link to this definition">#</a></dt>
+<dd><p>Automatically select and scale database records to target spectra.</p>
+<p>Requires a prior <code class="docutils literal notranslate"><span class="pre">authenticateDatabase</span></code> for <code class="docutils literal notranslate"><span class="pre">database</span></code> (GMDB or
+FDSN/ESM only; CESMD is not supported). <code class="docutils literal notranslate"><span class="pre">filters</span></code> must include at
+least one search criterion. <code class="docutils literal notranslate"><span class="pre">outputDirectory</span></code> must already be listed
+in Preferences → Motions. Omit <code class="docutils literal notranslate"><span class="pre">selection</span></code> / <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> to use
+wizard defaults (amplitude also drives the selection period window and
+scale-factor bounds).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Motion.</span></span><span class="sig-name descname"><span class="pre">Motion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motionName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Motion.Motion" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ProxyObject</span></code></p>
+<p>Inspect and transform one ground motion from the app motion library.</p>
+<p>Obtain an instance from <code class="docutils literal notranslate"><span class="pre">app.MotionLibrary.getMotion(name)</span></code>. Scaling, baseline
+correction, and timestep reduction write a new motion file and do not add it to
+the project or library automatically. Estimate Kappa returns fitted (or
+user-supplied) kappa-line values without plots.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.Motion.Motion.name" title="Link to this definition">#</a></dt>
+<dd><p>Motion name (file name without extension).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.getProperties">
+<span class="sig-name descname"><span class="pre">getProperties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionProperties" title="rsseismic.types.MotionProperties"><span class="pre">MotionProperties</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.getProperties" title="Link to this definition">#</a></dt>
+<dd><p>Return timestep, Nyquist frequency, PGA, PGV, PGD, and point count.</p>
+<p>Unit strings follow the Motion Manager units provider.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.scaleToG">
+<span class="sig-name descname"><span class="pre">scaleToG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.ScaleMotionResult" title="rsseismic.types.ScaleMotionResult"><span class="pre">ScaleMotionResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.scaleToG" title="Link to this definition">#</a></dt>
+<dd><p>Scale this motion so peak acceleration equals <code class="docutils literal notranslate"><span class="pre">targetG</span></code> (in g) and save it.</p>
+<p>The output file is not added to the motion library. When <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> is False
+(default), an existing file at <code class="docutils literal notranslate"><span class="pre">filePath</span></code> is an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.scaleBy">
+<span class="sig-name descname"><span class="pre">scaleBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.ScaleMotionResult" title="rsseismic.types.ScaleMotionResult"><span class="pre">ScaleMotionResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.scaleBy" title="Link to this definition">#</a></dt>
+<dd><p>Multiply this motion’s acceleration by <code class="docutils literal notranslate"><span class="pre">factor</span></code> and save it.</p>
+<p>The output file is not added to the motion library. When <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> is False
+(default), an existing file at <code class="docutils literal notranslate"><span class="pre">filePath</span></code> is an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.getTimeHistoryData">
+<span class="sig-name descname"><span class="pre">getTimeHistoryData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.getTimeHistoryData" title="Link to this definition">#</a></dt>
+<dd><p>Return the Single Motion View time-history table as a pandas DataFrame.</p>
+<p>Columns match the UI grid: Time, Acceleration, Velocity, Displacement,
+AriasIntensity, and HousnerIntensity. Column units are in
+<code class="docutils literal notranslate"><span class="pre">dataframe.attrs[&quot;column_units&quot;]</span></code> when available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.getSpectralData">
+<span class="sig-name descname"><span class="pre">getSpectralData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.getSpectralData" title="Link to this definition">#</a></dt>
+<dd><p>Return Fourier and spectral-acceleration tables as pandas DataFrames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A <code class="docutils literal notranslate"><span class="pre">(fourier,</span> <span class="pre">spectralAcceleration)</span></code> tuple. Fourier columns are
+Frequency, Amplitude, PhaseAngle, and SmoothedAmplitude. Spectral
+acceleration columns are Period plus the response-spectrum methods
+shown in Single Motion View. Column units are in
+<code class="docutils literal notranslate"><span class="pre">dataframe.attrs[&quot;column_units&quot;]</span></code> when available.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.estimateKappaFromBoundingFrequencies">
+<span class="sig-name descname"><span class="pre">estimateKappaFromBoundingFrequencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endFrequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.EstimateKappaResult" title="rsseismic.types.EstimateKappaResult"><span class="pre">EstimateKappaResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.estimateKappaFromBoundingFrequencies" title="Link to this definition">#</a></dt>
+<dd><p>Estimate kappa by linear regression between bounding frequencies (Hz).</p>
+<p>Matches the Estimate Kappa dialog option “Bounding frequencies”.
+<code class="docutils literal notranslate"><span class="pre">endFrequency</span></code> must be less than 100 Hz.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.estimateKappaFromConstantIntercept">
+<span class="sig-name descname"><span class="pre">estimateKappaFromConstantIntercept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kappa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yIntercept</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.EstimateKappaResult" title="rsseismic.types.EstimateKappaResult"><span class="pre">EstimateKappaResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.estimateKappaFromConstantIntercept" title="Link to this definition">#</a></dt>
+<dd><p>Evaluate the kappa line from a constant kappa and Y-intercept.</p>
+<p>Matches the Estimate Kappa dialog option “Constant value and intercept”.
+Start and end frequencies default to 0 Hz and 100 Hz on the server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.baselineCorrection">
+<span class="sig-name descname"><span class="pre">baselineCorrection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.BaselineCorrectionResult" title="rsseismic.types.BaselineCorrectionResult"><span class="pre">BaselineCorrectionResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.baselineCorrection" title="Link to this definition">#</a></dt>
+<dd><p>Apply baseline correction and save the corrected motion.</p>
+<p>The output file is not added to the motion library. When <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> is False
+(default), an existing file at <code class="docutils literal notranslate"><span class="pre">filePath</span></code> is an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.Motion.timestepReduction">
+<span class="sig-name descname"><span class="pre">timestepReduction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.TimestepReductionResult" title="rsseismic.types.TimestepReductionResult"><span class="pre">TimestepReductionResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.Motion.timestepReduction" title="Link to this definition">#</a></dt>
+<dd><p>Reduce the motion timestep by an integer <code class="docutils literal notranslate"><span class="pre">factor</span></code> of at least 2 and save it.</p>
+<p>Use <a class="reference internal" href="#rsseismic.Motion.Motion.getProperties" title="rsseismic.Motion.Motion.getProperties"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getProperties()</span></code></a> on this motion for the original timestep, Nyquist
+frequency, and point count. The returned <code class="docutils literal notranslate"><span class="pre">properties</span></code> are the reduced motion.
+The output file is not added to the motion library. When <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> is False
+(default), an existing file at <code class="docutils literal notranslate"><span class="pre">filePath</span></code> is an error.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rsseismic.Motion.</span></span><span class="sig-name descname"><span class="pre">MotionPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rsseismic.Motion.MotionPair" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ProxyObject</span></code></p>
+<p>Inspect and transform one horizontal ground-motion pair from the motion library.</p>
+<p>Get an instance with <code class="docutils literal notranslate"><span class="pre">app.MotionLibrary.getMotionPair(pairId)</span></code>. Use this for
+geometric-mean spectra, effective amplitude spectra, and scaling both components.
+For tools that apply to one component (kappa, baseline correction, timestep
+reduction), use <code class="docutils literal notranslate"><span class="pre">h1</span></code> or <code class="docutils literal notranslate"><span class="pre">h2</span></code>. Scaling writes new files and does not add them
+to the library.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.pairId">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pairId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.Motion.MotionPair.pairId" title="Link to this definition">#</a></dt>
+<dd><p>Pair name (shared prefix of the two horizontal motion file names).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.h1">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">h1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rsseismic.Motion.Motion" title="rsseismic.Motion.Motion"><span class="pre">Motion</span></a></em><a class="headerlink" href="#rsseismic.Motion.MotionPair.h1" title="Link to this definition">#</a></dt>
+<dd><p>First horizontal component of this pair.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.h2">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">h2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rsseismic.Motion.Motion" title="rsseismic.Motion.Motion"><span class="pre">Motion</span></a></em><a class="headerlink" href="#rsseismic.Motion.MotionPair.h2" title="Link to this definition">#</a></dt>
+<dd><p>Second horizontal component of this pair.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.getProperties">
+<span class="sig-name descname"><span class="pre">getProperties</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.MotionPairProperties" title="rsseismic.types.MotionPairProperties"><span class="pre">MotionPairProperties</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionPair.getProperties" title="Link to this definition">#</a></dt>
+<dd><p>Return timestep, Nyquist frequency, PGA, PGV, PGD, and point count for both
+horizontals.</p>
+<p>Values use the current Motion Manager display units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.getTimeHistoryData">
+<span class="sig-name descname"><span class="pre">getTimeHistoryData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rsseismic.Motion.MotionPair.getTimeHistoryData" title="Link to this definition">#</a></dt>
+<dd><p>Return time-history tables for both horizontals.</p>
+<p>Each table includes Time, Acceleration, Velocity, Displacement, AriasIntensity,
+and HousnerIntensity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.getSpectralData">
+<span class="sig-name descname"><span class="pre">getSpectralData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rsseismic.Motion.MotionPair.getSpectralData" title="Link to this definition">#</a></dt>
+<dd><p>Return Fourier and spectral-acceleration tables for both horizontals.</p>
+<p>For each component, the first table is Fourier data and the second is spectral
+acceleration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.getGeometricMeanSpectrum">
+<span class="sig-name descname"><span class="pre">getGeometricMeanSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectralType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.GeometricMeanSpectralType" title="rsseismic.types.GeometricMeanSpectralType"><span class="pre">GeometricMeanSpectralType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">GeometricMeanSpectralType.FREQUENCY_DOMAIN</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#rsseismic.Motion.MotionPair.getGeometricMeanSpectrum" title="Link to this definition">#</a></dt>
+<dd><p>Return the geometric-mean response spectrum for this pair.</p>
+<p><code class="docutils literal notranslate"><span class="pre">spectralType</span></code> chooses the response-spectrum method (Frequency Domain,
+Duhamel, Duhamel with timestep correction, Newmark, or Newmark with timestep
+correction). Defaults to Frequency Domain.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.getEffectiveAmplitudeSpectrum">
+<span class="sig-name descname"><span class="pre">getEffectiveAmplitudeSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bandwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#rsseismic.Motion.MotionPair.getEffectiveAmplitudeSpectrum" title="Link to this definition">#</a></dt>
+<dd><p>Return the smoothed Effective Amplitude Spectrum (EAS) for this pair.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bandwidth</span></code> is the Konno-Ohmachi smoothing parameter (PEER Report 2018/05),
+not a damping ratio. Omit it to use the recommended default (188.5).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.scaleToG">
+<span class="sig-name descname"><span class="pre">scaleToG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h1FilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h2FilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.ScaleMotionPairResult" title="rsseismic.types.ScaleMotionPairResult"><span class="pre">ScaleMotionPairResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionPair.scaleToG" title="Link to this definition">#</a></dt>
+<dd><p>Scale each horizontal so peak acceleration equals <code class="docutils literal notranslate"><span class="pre">targetG</span></code> (in g) and save
+both files.</p>
+<p>Each component is scaled on its own peak. The saved files are not added to the
+motion library. When <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> is False (default), an existing file at either
+path is an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.Motion.MotionPair.scaleBy">
+<span class="sig-name descname"><span class="pre">scaleBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h1FilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h2FilePath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.types.html#rsseismic.types.ScaleMotionPairResult" title="rsseismic.types.ScaleMotionPairResult"><span class="pre">ScaleMotionPairResult</span></a></span></span><a class="headerlink" href="#rsseismic.Motion.MotionPair.scaleBy" title="Link to this definition">#</a></dt>
+<dd><p>Multiply both horizontals by <code class="docutils literal notranslate"><span class="pre">factor</span></code> and save both files.</p>
+<p>The saved files are not added to the motion library. When <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> is False
+(default), an existing file at either path is an error.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rsseismic.Model.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rsseismic.Model module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rsseismic.Motions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">rsseismic.Motions module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.DiscoveredMotionPairs"><code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.DiscoveredMotionPairs.folderPath"><code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs.folderPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.DiscoveredMotionPairs.allPairs"><code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs.allPairs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.DiscoveredMotionPairs.selectedPairs"><code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs.selectedPairs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.DiscoveredMotionPairs.select"><code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs.select()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.DiscoveredMotionPairs.selectAll"><code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs.selectAll()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.DiscoveredMotionPairs.deselectAll"><code class="docutils literal notranslate"><span class="pre">DiscoveredMotionPairs.deselectAll()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary"><code class="docutils literal notranslate"><span class="pre">MotionLibrary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.getMotion"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.getMotion()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.getMotionPair"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.getMotionPair()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.getUnitSystem"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.getUnitSystem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.changeUnitSystem"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.changeUnitSystem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.convertMotionText"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.convertMotionText()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.convertMotionAT2"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.convertMotionAT2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.deleteMotions"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.deleteMotions()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.authenticateDatabase"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.authenticateDatabase()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.searchDatabaseRecords"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.searchDatabaseRecords()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.importDatabaseRecords"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.importDatabaseRecords()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.discoverMotionPairsInFolder"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.discoverMotionPairsInFolder()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.getTargetSpectra"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.getTargetSpectra()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.matchToTargetSpectraManual"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.matchToTargetSpectraManual()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionLibrary.matchToTargetSpectraAutomatic"><code class="docutils literal notranslate"><span class="pre">MotionLibrary.matchToTargetSpectraAutomatic()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion"><code class="docutils literal notranslate"><span class="pre">Motion</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.name"><code class="docutils literal notranslate"><span class="pre">Motion.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.getProperties"><code class="docutils literal notranslate"><span class="pre">Motion.getProperties()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.scaleToG"><code class="docutils literal notranslate"><span class="pre">Motion.scaleToG()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.scaleBy"><code class="docutils literal notranslate"><span class="pre">Motion.scaleBy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.getTimeHistoryData"><code class="docutils literal notranslate"><span class="pre">Motion.getTimeHistoryData()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.getSpectralData"><code class="docutils literal notranslate"><span class="pre">Motion.getSpectralData()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.estimateKappaFromBoundingFrequencies"><code class="docutils literal notranslate"><span class="pre">Motion.estimateKappaFromBoundingFrequencies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.estimateKappaFromConstantIntercept"><code class="docutils literal notranslate"><span class="pre">Motion.estimateKappaFromConstantIntercept()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.baselineCorrection"><code class="docutils literal notranslate"><span class="pre">Motion.baselineCorrection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.Motion.timestepReduction"><code class="docutils literal notranslate"><span class="pre">Motion.timestepReduction()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair"><code class="docutils literal notranslate"><span class="pre">MotionPair</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.pairId"><code class="docutils literal notranslate"><span class="pre">MotionPair.pairId</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.h1"><code class="docutils literal notranslate"><span class="pre">MotionPair.h1</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.h2"><code class="docutils literal notranslate"><span class="pre">MotionPair.h2</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.getProperties"><code class="docutils literal notranslate"><span class="pre">MotionPair.getProperties()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.getTimeHistoryData"><code class="docutils literal notranslate"><span class="pre">MotionPair.getTimeHistoryData()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.getSpectralData"><code class="docutils literal notranslate"><span class="pre">MotionPair.getSpectralData()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.getGeometricMeanSpectrum"><code class="docutils literal notranslate"><span class="pre">MotionPair.getGeometricMeanSpectrum()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.getEffectiveAmplitudeSpectrum"><code class="docutils literal notranslate"><span class="pre">MotionPair.getEffectiveAmplitudeSpectrum()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.scaleToG"><code class="docutils literal notranslate"><span class="pre">MotionPair.scaleToG()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Motion.MotionPair.scaleBy"><code class="docutils literal notranslate"><span class="pre">MotionPair.scaleBy()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generatedAPIDocFiles/rsseismic.Motion.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rocscience Inc..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

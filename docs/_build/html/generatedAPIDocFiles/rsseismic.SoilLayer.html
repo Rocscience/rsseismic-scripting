@@ -277,13 +277,18 @@
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Application.html">rsseismic.Application module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.DampingFormulation.html">rsseismic.DampingFormulation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ElementTestLayer.html">rsseismic.ElementTestLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motion.html">rsseismic.Motion module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Preferences.html">rsseismic.Preferences module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.RSLog.html">rsseismic.RSLog module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.SoilLayer module</a></li>
@@ -362,11 +367,33 @@
 come from <code class="docutils literal notranslate"><span class="pre">model.Profiles.listSoilLayers()</span></code> or <code class="docutils literal notranslate"><span class="pre">listActiveSoilLayers()</span></code>.</p>
 <p>Use the generated <code class="docutils literal notranslate"><span class="pre">get*</span></code> / <code class="docutils literal notranslate"><span class="pre">set*</span></code> helpers for scalar layer properties such as
 thickness, unit weight, and soil model. Reference curves are edited through
-<code class="docutils literal notranslate"><span class="pre">layer.ReferenceCurve</span></code>; fitted dynamics and curve fitting use <code class="docutils literal notranslate"><span class="pre">layer.Curve</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">layer.ReferenceCurve</span></code>; fitted dynamics and curve fitting use <code class="docutils literal notranslate"><span class="pre">layer.Curve</span></code>.
+Use <code class="docutils literal notranslate"><span class="pre">createElementTestLayer()</span></code> to open a Single Element Test working copy that
+does not modify this profile layer.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="rsseismic.SoilLayer.SoilLayer.layerId">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layerId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#rsseismic.SoilLayer.SoilLayer.layerId" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rsseismic.SoilLayer.SoilLayer.createElementTestLayer">
+<span class="sig-name descname"><span class="pre">createElementTestLayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rsseismic.ElementTestLayer.html#rsseismic.ElementTestLayer.ElementTestLayer" title="rsseismic.ElementTestLayer.ElementTestLayer"><span class="pre">ElementTestLayer</span></a></span></span><a class="headerlink" href="#rsseismic.SoilLayer.SoilLayer.createElementTestLayer" title="Link to this definition">#</a></dt>
+<dd><p>Create a Single Element Test working copy of this soil layer.</p>
+<p>The working copy starts from the current layer properties. Edits and runs on
+the returned <code class="docutils literal notranslate"><span class="pre">ElementTestLayer</span></code> do not change this profile layer. Single
+Element Test requires Nonlinear analysis with the Lumped Mass solver and is
+not available for mean-profile layers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>profileName</strong> – Profile that owns this layer. Leave empty to use the active
+profile.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An <code class="docutils literal notranslate"><span class="pre">ElementTestLayer</span></code> you can configure, run, and close. Prefer a
+<code class="docutils literal notranslate"><span class="pre">with</span></code> block so the working copy is released when you are done.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -421,6 +448,7 @@ thickness, unit weight, and soil model. Reference curves are edited through
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.SoilLayer.SoilLayer"><code class="docutils literal notranslate"><span class="pre">SoilLayer</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.SoilLayer.SoilLayer.layerId"><code class="docutils literal notranslate"><span class="pre">SoilLayer.layerId</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.SoilLayer.SoilLayer.createElementTestLayer"><code class="docutils literal notranslate"><span class="pre">SoilLayer.createElementTestLayer()</span></code></a></li>
 </ul>
 </li>
 </ul>

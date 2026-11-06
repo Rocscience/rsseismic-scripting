@@ -1,14 +1,15 @@
 Python Script Examples
 ======================
 
-These pages show how example scripts are wired into the reference manual.
-They are **scaffold samples** for engineers to replace or expand with production-quality examples later.
+These pages contain **Python scripts** you can run against a live RSSeismic session to automate profiles, analysis, and ground-motion tasks.
 
-To add a new example:
+* **Getting started** — connect to RSSeismic and run a minimal script.
+* **Tutorials** — step-by-step workflows; download bundled input files from each page when needed.
+* **Workflows** — project setup, batch runs, and related tasks.
+* **RSLog** — import boreholes from a JSON export or RSLog account.
+* **Ground motions** — view, convert, import, and process motions.
 
-1. Add or update a script under ``examples/``.
-2. Add ``docs/example_code/<name>.rst`` with a ``.. literalinclude::`` directive.
-3. Register the page in the appropriate toctree below.
+Install the RSSeismic Python library (see the home page), ensure RSSeismic is running with scripting enabled, then run a script from your copy of the repository or adapt the code shown on each page.
 
 Getting started
 ---------------
@@ -17,6 +18,16 @@ Getting started
 
    example_code/example_ping
    example_code/example_auto_launch_app
+
+Tutorials
+---------
+.. toctree::
+   :maxdepth: 1
+
+   example_code/tutorial_1
+   example_code/tutorial_2
+   example_code/tutorial_3
+   example_code/tutorial_4
 
 Workflows
 ---------
@@ -27,3 +38,27 @@ Workflows
    example_code/example_single_profile_workflow_v1
    example_code/example_auto_profile_workflow
    example_code/example_plot_results_v1
+   .. example_code/example_tri_directional_fem_workflow
+   example_code/example_single_element_test
+   example_code/example_damping_formulation
+
+RSLog
+-----
+.. toctree::
+   :maxdepth: 1
+
+   example_code/example_rslog_import
+
+Ground motions
+--------------
+.. toctree::
+   :maxdepth: 1
+
+   example_code/example_single_motion_view
+   example_code/example_motion_pair_view
+   example_code/example_estimate_kappa
+   example_code/example_baseline_correction_timestep_reduction
+   example_code/example_convert_motion
+   example_code/example_import_database_records
+   example_code/example_match_to_target_spectra
+

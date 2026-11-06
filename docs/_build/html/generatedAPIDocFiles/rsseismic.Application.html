@@ -277,13 +277,18 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">rsseismic.Application module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ApplicationManager.html">rsseismic.ApplicationManager module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.BedrockLayer.html">rsseismic.BedrockLayer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.DampingFormulation.html">rsseismic.DampingFormulation module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.ElementTestLayer.html">rsseismic.ElementTestLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfile.html">rsseismic.MeanProfile module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.MeanProfileSoilLayer.html">rsseismic.MeanProfileSoilLayer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Model.html">rsseismic.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Motion.html">rsseismic.Motion module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Motions.html">rsseismic.Motions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.Preferences.html">rsseismic.Preferences module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProfileGenerationSettings.html">rsseismic.ProfileGenerationSettings module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Profiles.html">rsseismic.Profiles module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ProjectSettings.html">rsseismic.ProjectSettings module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rsseismic.RSLog.html">rsseismic.RSLog module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.ReferenceCurve.html">rsseismic.ReferenceCurve module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.Results.html">rsseismic.Results module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rsseismic.SoilLayer.html">rsseismic.SoilLayer module</a></li>
@@ -361,6 +366,12 @@
 <p>Mirrors RS3’s RS3Modeler: connect on a port, open projects, return Model proxies.
 Use startApplication() to launch RSSeismic with -startScriptingServer when it is
 not already running.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rsseismic.Application.RSSeismicApplication.preferences">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preferences</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="rsseismic.Preferences.html#rsseismic.Preferences.Preferences" title="rsseismic.Preferences.Preferences"><span class="pre">Preferences</span></a></em><a class="headerlink" href="#rsseismic.Application.RSSeismicApplication.preferences" title="Link to this definition">#</a></dt>
+<dd><p>Global RSSeismic application preferences (<code class="docutils literal notranslate"><span class="pre">DeepSoilPreferences</span></code>).</p>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="rsseismic.Application.RSSeismicApplication.port">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#rsseismic.Application.RSSeismicApplication.port" title="Link to this definition">#</a></dt>
@@ -515,6 +526,7 @@ the batch. When None, uses getMaxConcurrentAnalyses().</p></li>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Application.RSSeismicApplication"><code class="docutils literal notranslate"><span class="pre">RSSeismicApplication</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Application.RSSeismicApplication.preferences"><code class="docutils literal notranslate"><span class="pre">RSSeismicApplication.preferences</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Application.RSSeismicApplication.port"><code class="docutils literal notranslate"><span class="pre">RSSeismicApplication.port</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Application.RSSeismicApplication.client"><code class="docutils literal notranslate"><span class="pre">RSSeismicApplication.client</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsseismic.Application.RSSeismicApplication.startApplication"><code class="docutils literal notranslate"><span class="pre">RSSeismicApplication.startApplication()</span></code></a></li>

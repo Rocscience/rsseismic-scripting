@@ -39,6 +39,7 @@ napoleon_use_ivar = True
 
 exclude_patterns = ['_build',
                     'generatedAPIDocFiles/modules.rst',
+                    'example_code/example_tri_directional_fem_workflow.rst',
                     ]
 
 # -- Options for LaTeX output -------------------------------------------------

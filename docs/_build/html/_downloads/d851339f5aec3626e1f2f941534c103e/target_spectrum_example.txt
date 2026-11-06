@@ -1,0 +1,11 @@
+# User-defined target spectrum (period in seconds, spectral acceleration in g).
+# Used by examples/Tutorial_3 and Tutorial_4 when --target-source file.
+0.01 0.25
+0.05 0.45
+0.10 0.55
+0.20 0.60
+0.50 0.55
+1.00 0.40
+2.00 0.28
+3.00 0.20
+4.00 0.15

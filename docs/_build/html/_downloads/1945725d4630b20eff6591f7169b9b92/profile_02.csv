@@ -1,0 +1,11 @@
+layer,thickness_m,unit_weight,vs_m_s,shear_strength_kPa,soil_type,curve_model,reduction_factor_formulation,ref_params
+1,5,20,210.0,35,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+2,5,20,235.0,105.1,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+3,5,20,260.0,175.1,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+4,5,20,285.0,245.1,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+5,5,20,310.0,315.1,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+6,5,20,335.0,385.2,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+7,5,20,360.0,455.2,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+8,5,20,385.0,525.3,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+9,5,20,410.0,595.3,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
+10,5,20,435.0,665.4,Sand,Darendeli_2001,MRDF_UIUC,Ko=0.46;PI=0
